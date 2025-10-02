@@ -7,7 +7,6 @@ import {
   type Region,
 } from "../types";
 import {
-  getStoredProgress,
   saveProgress,
   createNewProfile,
   calculateStatistics,
@@ -24,7 +23,7 @@ const createInitialProgress = (): UserProgress => ({
 export function useProgress(gameData: Region[]) {
   const [progress, setProgress] = useLocalStorage<UserProgress>(
     "ragnarok_progress",
-    createInitialProgress()
+    createInitialProgress(),
   );
   const [isLoading, setIsLoading] = useState(true);
 
@@ -53,7 +52,7 @@ export function useProgress(gameData: Region[]) {
 
       return newProfile.id;
     },
-    [progress.profiles, progress.activeProfileId, setProgress]
+    [progress, setProgress],
   );
 
   const switchProfile = useCallback(
@@ -69,7 +68,7 @@ export function useProgress(gameData: Region[]) {
         saveProgress(newProgress);
       }
     },
-    [progress.profiles, progress.activeProfileId, setProgress]
+    [progress, setProgress],
   );
 
   const updateProfile = useCallback(
@@ -77,7 +76,7 @@ export function useProgress(gameData: Region[]) {
       const newProgress = {
         ...progress,
         profiles: progress.profiles.map((p) =>
-          p.id === profileId ? { ...p, ...updates } : p
+          p.id === profileId ? { ...p, ...updates } : p,
         ),
         lastUpdated: Date.now(),
       };
@@ -85,13 +84,13 @@ export function useProgress(gameData: Region[]) {
       setProgress(newProgress);
       saveProgress(newProgress);
     },
-    [progress.profiles, progress.activeProfileId, setProgress]
+    [progress, setProgress],
   );
 
   const deleteProfile = useCallback(
     (profileId: string) => {
       const remainingProfiles = progress.profiles.filter(
-        (p) => p.id !== profileId
+        (p) => p.id !== profileId,
       );
       const newActiveId =
         progress.activeProfileId === profileId
@@ -108,7 +107,7 @@ export function useProgress(gameData: Region[]) {
       setProgress(newProgress);
       saveProgress(newProgress);
     },
-    [progress.profiles, progress.activeProfileId, setProgress]
+    [progress, setProgress],
   );
 
   const toggleObjective = useCallback(
@@ -117,7 +116,7 @@ export function useProgress(gameData: Region[]) {
       if (!activeProfile) return;
 
       const existingIndex = activeProfile.completedObjectives.findIndex(
-        (obj) => obj.mapId === mapId && obj.objectiveType === objectiveType
+        (obj) => obj.mapId === mapId && obj.objectiveType === objectiveType,
       );
 
       let newCompletedObjectives: CompletedObjective[];
@@ -125,7 +124,7 @@ export function useProgress(gameData: Region[]) {
       if (existingIndex >= 0) {
         // Remove objective (mark as incomplete)
         newCompletedObjectives = activeProfile.completedObjectives.filter(
-          (_, index) => index !== existingIndex
+          (_, index) => index !== existingIndex,
         );
       } else {
         // Add objective (mark as complete)
@@ -141,17 +140,14 @@ export function useProgress(gameData: Region[]) {
       }
 
       // Recalculate statistics
-      const newStatistics = calculateStatistics(
-        newCompletedObjectives,
-        gameData
-      );
+      const newStatistics = calculateStatistics(newCompletedObjectives);
 
       updateProfile(activeProfile.id, {
         completedObjectives: newCompletedObjectives,
         statistics: newStatistics,
       });
     },
-    [getActiveProfile, updateProfile, gameData]
+    [getActiveProfile, updateProfile],
   );
 
   const isObjectiveCompleted = useCallback(
@@ -160,22 +156,22 @@ export function useProgress(gameData: Region[]) {
       if (!activeProfile) return false;
 
       return activeProfile.completedObjectives.some(
-        (obj) => obj.mapId === mapId && obj.objectiveType === objectiveType
+        (obj) => obj.mapId === mapId && obj.objectiveType === objectiveType,
       );
     },
-    [getActiveProfile]
+    [getActiveProfile],
   );
 
   const getMapProgress = useCallback(
     (
       mapId: string,
-      totalObjectiveTypes: number
+      totalObjectiveTypes: number,
     ): { completed: number; percentage: number } => {
       const activeProfile = getActiveProfile();
       if (!activeProfile) return { completed: 0, percentage: 0 };
 
       const completed = activeProfile.completedObjectives.filter(
-        (obj) => obj.mapId === mapId
+        (obj) => obj.mapId === mapId,
       ).length;
       const percentage =
         totalObjectiveTypes > 0
@@ -184,12 +180,12 @@ export function useProgress(gameData: Region[]) {
 
       return { completed, percentage };
     },
-    [getActiveProfile]
+    [getActiveProfile],
   );
 
   const getRegionProgress = useCallback(
     (
-      region: Region
+      region: Region,
     ): { completed: number; total: number; percentage: number } => {
       const activeProfile = getActiveProfile();
       if (!activeProfile) return { completed: 0, total: 0, percentage: 0 };
@@ -200,7 +196,7 @@ export function useProgress(gameData: Region[]) {
       region.maps.forEach((map) => {
         totalObjectives += map.availableObjectiveTypes.length;
         completedObjectives += activeProfile.completedObjectives.filter(
-          (obj) => obj.mapId === map.id
+          (obj) => obj.mapId === map.id,
         ).length;
       });
 
@@ -215,7 +211,7 @@ export function useProgress(gameData: Region[]) {
         percentage,
       };
     },
-    [getActiveProfile]
+    [getActiveProfile],
   );
 
   const importData = useCallback(
@@ -235,11 +231,11 @@ export function useProgress(gameData: Region[]) {
         saveProgress(parsed);
 
         return { success: true };
-      } catch (error) {
+      } catch {
         return { success: false, error: "Invalid JSON format" };
       }
     },
-    [setProgress]
+    [setProgress],
   );
 
   const exportData = useCallback((): string => {
@@ -264,11 +260,11 @@ export function useProgress(gameData: Region[]) {
 
         // Remove existing objectives for this map and add new ones
         const filteredObjectives = activeProfile.completedObjectives.filter(
-          (obj) => obj.mapId !== mapId
+          (obj) => obj.mapId !== mapId,
         );
         const allObjectives = [...filteredObjectives, ...newObjectives];
 
-        const newStatistics = calculateStatistics(allObjectives, gameData);
+        const newStatistics = calculateStatistics(allObjectives);
 
         updateProfile(activeProfile.id, {
           completedObjectives: allObjectives,
@@ -277,12 +273,9 @@ export function useProgress(gameData: Region[]) {
       } else {
         // Remove all objectives for this map
         const newCompletedObjectives = activeProfile.completedObjectives.filter(
-          (obj) => obj.mapId !== mapId
+          (obj) => obj.mapId !== mapId,
         );
-        const newStatistics = calculateStatistics(
-          newCompletedObjectives,
-          gameData
-        );
+        const newStatistics = calculateStatistics(newCompletedObjectives);
 
         updateProfile(activeProfile.id, {
           completedObjectives: newCompletedObjectives,
@@ -290,7 +283,7 @@ export function useProgress(gameData: Region[]) {
         });
       }
     },
-    [getActiveProfile, updateProfile, gameData]
+    [getActiveProfile, updateProfile, gameData],
   );
 
   const activeProfile = useMemo(() => getActiveProfile(), [getActiveProfile]);

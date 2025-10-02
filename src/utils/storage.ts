@@ -11,10 +11,13 @@ const BACKUP_KEY = "ragnarok_progress_backup";
 
 export const createEmptyStatistics = (): Statistics => ({
   totalCompleted: 0,
-  completedByType: Object.values(ObjectiveType).reduce((acc, type) => {
-    acc[type] = 0;
-    return acc;
-  }, {} as Record<ObjectiveType, number>),
+  completedByType: Object.values(ObjectiveType).reduce(
+    (acc, type) => {
+      acc[type] = 0;
+      return acc;
+    },
+    {} as Record<ObjectiveType, number>,
+  ),
   regionsCompleted: 0,
   mapsCompleted: 0,
   lastActivity: Date.now(),
@@ -40,8 +43,8 @@ export const getStoredProgress = (): UserProgress | null => {
     }
 
     return parsed;
-  } catch (error) {
-    console.error("Error reading stored progress:", error);
+  } catch {
+    console.error("Error reading stored progress");
     return null;
   }
 };
@@ -51,8 +54,8 @@ export const saveProgress = (progress: UserProgress): boolean => {
     progress.lastUpdated = Date.now();
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
     return true;
-  } catch (error) {
-    console.error("Error saving progress:", error);
+  } catch {
+    console.error("Error saving progress");
     return false;
   }
 };
@@ -91,7 +94,7 @@ export const exportProgress = (): string => {
 };
 
 export const importProgress = (
-  jsonData: string
+  jsonData: string,
 ): { success: boolean; error?: string } => {
   try {
     const parsed = JSON.parse(jsonData);
@@ -111,14 +114,13 @@ export const importProgress = (
     }
 
     return { success: true };
-  } catch (error) {
+  } catch {
     return { success: false, error: "Invalid JSON format" };
   }
 };
 
 export const calculateStatistics = (
   completedObjectives: CompletedObjective[],
-  regions: any[]
 ): Statistics => {
   const stats = createEmptyStatistics();
 
@@ -132,7 +134,7 @@ export const calculateStatistics = (
   // Calculate last activity
   if (completedObjectives.length > 0) {
     stats.lastActivity = Math.max(
-      ...completedObjectives.map((obj) => obj.completedAt)
+      ...completedObjectives.map((obj) => obj.completedAt),
     );
   }
 
@@ -141,14 +143,16 @@ export const calculateStatistics = (
   return stats;
 };
 
-const isValidUserProgress = (data: any): data is UserProgress => {
+const isValidUserProgress = (data: unknown): data is UserProgress => {
+  if (typeof data !== "object" || data === null) return false;
+
+  const record = data as Record<string, unknown>;
+
   return (
-    typeof data === "object" &&
-    data !== null &&
-    Array.isArray(data.profiles) &&
-    typeof data.activeProfileId === "string" &&
-    typeof data.lastUpdated === "number" &&
-    typeof data.version === "string"
+    Array.isArray(record.profiles) &&
+    typeof record.activeProfileId === "string" &&
+    typeof record.lastUpdated === "number" &&
+    typeof record.version === "string"
   );
 };
 
@@ -157,8 +161,8 @@ export const clearAllData = (): boolean => {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(BACKUP_KEY);
     return true;
-  } catch (error) {
-    console.error("Error clearing data:", error);
+  } catch {
+    console.error("Error clearing data");
     return false;
   }
 };

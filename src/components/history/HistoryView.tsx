@@ -42,7 +42,7 @@ export function HistoryView({
     // Filter by objective type
     if (filters.objectiveType !== "all") {
       filtered = filtered.filter(
-        (obj) => obj.objectiveType === filters.objectiveType
+        (obj) => obj.objectiveType === filters.objectiveType,
       );
     }
 
@@ -52,7 +52,7 @@ export function HistoryView({
       const startOfToday = new Date(
         now.getFullYear(),
         now.getMonth(),
-        now.getDate()
+        now.getDate(),
       );
       const startOfWeek = new Date(startOfToday);
       startOfWeek.setDate(startOfToday.getDate() - startOfToday.getDay());
@@ -122,7 +122,10 @@ export function HistoryView({
     }
   };
 
-  const updateFilter = (key: keyof HistoryFilters, value: any) => {
+  const updateFilter = <K extends keyof HistoryFilters>(
+    key: K,
+    value: HistoryFilters[K],
+  ) => {
     setFilters((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -143,7 +146,9 @@ export function HistoryView({
               <label className="text-sm font-medium">Objective Type</label>
               <Select
                 value={filters.objectiveType}
-                onValueChange={(value) => updateFilter("objectiveType", value)}
+                onValueChange={(value: HistoryFilters["objectiveType"]) =>
+                  updateFilter("objectiveType", value)
+                }
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -164,7 +169,12 @@ export function HistoryView({
               <label className="text-sm font-medium">Time Range</label>
               <Select
                 value={filters.timeRange}
-                onValueChange={(value) => updateFilter("timeRange", value)}
+                onValueChange={(value: string) =>
+                  updateFilter(
+                    "timeRange",
+                    value as HistoryFilters["timeRange"],
+                  )
+                }
               >
                 <SelectTrigger>
                   <SelectValue />
@@ -183,7 +193,7 @@ export function HistoryView({
               <label className="text-sm font-medium">Region</label>
               <Select
                 value={filters.region}
-                onValueChange={(value) => updateFilter("region", value)}
+                onValueChange={(value: string) => updateFilter("region", value)}
               >
                 <SelectTrigger>
                   <SelectValue />

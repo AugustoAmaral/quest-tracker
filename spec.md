@@ -3,9 +3,11 @@
 ## 1. System Overview
 
 ### 1.1 Objective
+
 Develop a web application for individual progress tracking in Ragnarok Mobile Classic, allowing players to mark completed objectives in each game map.
 
 ### 1.2 Main Features
+
 - **No Backend**: Data stored locally (LocalStorage)
 - **Mobile-First**: Responsive interface optimized for mobile devices
 - **Multi-Character**: Support for multiple progress profiles
@@ -17,8 +19,8 @@ Develop a web application for individual progress tracking in Ragnarok Mobile Cl
 
 ```typescript
 interface Region {
-  id: string;           // Unique region ID (e.g., "prontera")
-  name: string;         // Region name
+  id: string; // Unique region ID (e.g., "prontera")
+  name: string; // Region name
   levelRange: {
     min: number;
     max: number;
@@ -27,21 +29,21 @@ interface Region {
 }
 
 interface Map {
-  id: string;           // Unique map ID (e.g., "prontera_field_01")
-  name: string;         // Map name
+  id: string; // Unique map ID (e.g., "prontera_field_01")
+  name: string; // Map name
   levelRange: {
     min: number;
     max: number;
   };
   objectives: Objective[];
-  chestImage?: string;  // Path to image showing chest locations
+  chestImage?: string; // Path to image showing chest locations
 }
 
 interface Objective {
-  id: string;           // Unique objective ID
+  id: string; // Unique objective ID
   type: ObjectiveType;
-  name: string;         // Objective description
-  repeatable: boolean;  // If repeatable (only for dailies)
+  name: string; // Objective description
+  repeatable: boolean; // If repeatable (only for dailies)
 }
 
 enum ObjectiveType {
@@ -57,7 +59,7 @@ enum ObjectiveType {
   DELIVERY_QUEST_TYPE2 = "delivery_quest_2",
   PHOTO_SPOT_TYPE1 = "photo_spot_1",
   PHOTO_SPOT_TYPE2 = "photo_spot_2",
-  CHEST = "chest"
+  CHEST = "chest",
 }
 ```
 
@@ -68,13 +70,13 @@ interface UserProgress {
   profiles: Profile[];
   activeProfileId: string;
   lastUpdated: number;
-  version: string;      // Schema version for future compatibility
+  version: string; // Schema version for future compatibility
 }
 
 interface Profile {
-  id: string;           // Generated UUID
-  name: string;         // Character/profile name
-  createdAt: number;    // Creation timestamp
+  id: string; // Generated UUID
+  name: string; // Character/profile name
+  createdAt: number; // Creation timestamp
   completedObjectives: CompletedObjective[];
   statistics: Statistics;
 }
@@ -83,7 +85,7 @@ interface CompletedObjective {
   mapId: string;
   objectiveId: string;
   objectiveType: ObjectiveType;
-  completedAt: number;  // Timestamp
+  completedAt: number; // Timestamp
 }
 
 interface Statistics {
@@ -100,6 +102,7 @@ interface Statistics {
 ### 3.1 Core Features
 
 #### 3.1.1 Profile Management
+
 - **Create Profile**: Add new profile with custom name
 - **Select Profile**: Switch between existing profiles
 - **Edit Profile**: Rename existing profile
@@ -107,28 +110,32 @@ interface Statistics {
 - **Active Profile**: Visual indication of currently selected profile
 
 #### 3.1.2 Map Navigation
+
 - **Region List**: Display all available regions
 - **Maps per Region**: Expand region to see maps
 - **Search**: Search regions/maps by name or level
-- **Filters**: 
+- **Filters**:
   - By completion status (complete/incomplete/partial)
   - By level range
   - By available objective type
 
 #### 3.1.3 Objective Tracking
+
 - **Check/Uncheck**: Radio button for each objective
-- **Progress Visualization**: 
+- **Progress Visualization**:
   - Progress bar per map
   - Completion percentage
   - Visual indicators (colors and star)
 - **Chest Image**: View chest locations when available
 
 #### 3.1.4 History
+
 - **Automatic Recording**: Save timestamp for each action
 - **Visualization**: Chronological list of completed objectives
 - **History Filters**: By date, objective type, region
 
 #### 3.1.5 Import/Export
+
 - **Export**: Download JSON with all LocalStorage data
 - **Import**: Load JSON and replace/merge data
 - **Validation**: Check imported data integrity
@@ -137,11 +144,13 @@ interface Statistics {
 ### 3.2 Secondary Features
 
 #### 3.2.1 Statistics
+
 - **Dashboard**: Progress overview
 - **Charts**: Progress by objective type
 - **Achievements**: Progress milestones (25%, 50%, 75%, 100%)
 
 #### 3.2.2 Settings
+
 - **Theme**: Light/Dark
 - **Language**: EN/PT-BR
 - **Default Sorting**: How to list regions/maps
@@ -230,6 +239,7 @@ interface Statistics {
 ## 5. User Flows
 
 ### 5.1 First Access
+
 1. User accesses the site
 2. System checks LocalStorage
 3. If empty, display welcome screen
@@ -237,6 +247,7 @@ interface Statistics {
 5. Create profile and redirect to region list
 
 ### 5.2 Mark Objective as Complete
+
 1. User selects region
 2. Expands to see maps
 3. Clicks on desired map
@@ -246,6 +257,7 @@ interface Statistics {
 7. Updates statistics and visual indicators
 
 ### 5.3 Export/Import Data
+
 1. User accesses settings
 2. Clicks "Export Data"
 3. System generates JSON and downloads
@@ -347,11 +359,13 @@ src/
 ## 8. Error Handling
 
 ### 8.1 LocalStorage Errors
+
 - **Storage Full**: Alert user and suggest export/cleanup
 - **Parse Error**: Show message and offer reset with backup
 - **Corrupted Data**: Validate structure and offer partial recovery
 
 ### 8.2 Import Errors
+
 - **Invalid Format**: Show specific invalid fields
 - **Version Mismatch**: Attempt automatic migration or alert
 - **Missing Required Fields**: List missing required fields
@@ -359,11 +373,13 @@ src/
 ## 9. Optimizations and Performance
 
 ### 9.1 LocalStorage
+
 - ~5-10MB limit
 - Data compression if necessary
 - Clean old data (history > 1 year)
 
 ### 9.2 React Optimizations
+
 - Lazy loading for detail components
 - Memoization of progress calculations
 - Virtual scrolling for long lists
@@ -372,12 +388,14 @@ src/
 ## 10. Future Implementations
 
 ### Phase 2
+
 - Interactive clickable world map
 - Achievement system
 - Progress sharing (unique URL)
 - PWA with complete offline functionality
 
 ### Phase 3
+
 - Cloud sync (optional)
 - Daily reset notifications
 - Guides and tips per map
@@ -386,6 +404,7 @@ src/
 ## 11. Deploy and Maintenance
 
 ### 11.1 Build and Deploy
+
 ```bash
 # Build for production
 npm run build
@@ -395,12 +414,14 @@ firebase deploy --only hosting
 ```
 
 ### 11.2 Data Updates
+
 1. Edit `src/data/maps.json`
 2. Increment version
 3. Create new build and deploy
 4. Users receive new maps automatically
 
 ## 12. Security Considerations
+
 - Validation of all user inputs
 - Data sanitization before saving
 - Size limit for imports

@@ -8,7 +8,7 @@ import { HistoryView } from "./components/history/HistoryView";
 import { SettingsView } from "./components/settings/SettingsView";
 import { ProfileManager } from "./components/profile/ProfileManager";
 import { useProgress } from "./hooks/useProgress";
-import type { FilterOptions, Region, GameMap } from "./types";
+import type { FilterOptions, GameMap } from "./types";
 import { DEFAULT_LEVEL_RANGE } from "./utils/constants";
 import { clearAllData } from "./utils/storage";
 import { Toaster } from "./components/ui/sonner";
@@ -40,7 +40,7 @@ export default function App() {
   } = useProgress(gameData);
 
   const [activeTab, setActiveTab] = useState<"maps" | "history" | "settings">(
-    "maps"
+    "maps",
   );
   const [filters, setFilters] = useState<FilterOptions>(defaultFilters);
   const [selectedMapId, setSelectedMapId] = useState<string | null>(null);
@@ -123,7 +123,7 @@ export default function App() {
       const map = gameData.flatMap((r) => r.maps).find((m) => m.id === mapId);
       return getMapProgress(mapId, map?.availableObjectiveTypes.length || 0);
     },
-    [getMapProgress]
+    [getMapProgress],
   );
 
   if (isLoading) {
@@ -158,7 +158,7 @@ export default function App() {
                 map={selectedMap}
                 progress={getMapProgress(
                   selectedMapId,
-                  selectedMap.availableObjectiveTypes.length
+                  selectedMap.availableObjectiveTypes.length,
                 )}
                 isObjectiveCompleted={(objectiveType) =>
                   isObjectiveCompleted(selectedMapId, objectiveType)

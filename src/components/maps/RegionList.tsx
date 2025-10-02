@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronDown, ChevronRight, Star } from "lucide-react";
-import type { Region, FilterOptions } from "../../types";
+import type { Region, FilterOptions, ObjectiveType } from "../../types";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { ProgressBar } from "../common/ProgressBar";
@@ -28,7 +28,7 @@ export function RegionList({
   onToggleMapComplete,
 }: RegionListProps) {
   const [expandedRegions, setExpandedRegions] = useState<Set<string>>(
-    new Set()
+    new Set(),
   );
 
   const toggleRegion = (regionId: string) => {
@@ -50,7 +50,7 @@ export function RegionList({
       ) {
         // Also check if any map matches the search
         const mapMatches = region.maps.some((map) =>
-          map.name.toLowerCase().includes(filters.search.toLowerCase())
+          map.name.toLowerCase().includes(filters.search.toLowerCase()),
         );
         if (!mapMatches) return false;
       }
@@ -79,7 +79,9 @@ export function RegionList({
       // Objective type filter
       if (filters.objectiveType !== "all") {
         const hasObjectiveType = region.maps.some((map) =>
-          map.availableObjectiveTypes.includes(filters.objectiveType)
+          map.availableObjectiveTypes.includes(
+            filters.objectiveType as ObjectiveType,
+          ),
         );
         if (!hasObjectiveType) return false;
       }

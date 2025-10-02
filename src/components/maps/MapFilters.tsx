@@ -17,7 +17,10 @@ interface MapFiltersProps {
 }
 
 export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
-  const updateFilter = (key: keyof FilterOptions, value: any) => {
+  const updateFilter = <K extends keyof FilterOptions>(
+    key: K,
+    value: FilterOptions[K],
+  ) => {
     onFiltersChange({
       ...filters,
       [key]: value,
@@ -46,7 +49,9 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
           </Label>
           <Select
             value={filters.completionStatus}
-            onValueChange={(value) => updateFilter("completionStatus", value)}
+            onValueChange={(value: FilterOptions["completionStatus"]) =>
+              updateFilter("completionStatus", value)
+            }
           >
             <SelectTrigger id="completion-filter">
               <SelectValue />
@@ -67,10 +72,10 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
           </Label>
           <Select
             value={`${filters.levelRange.min}-${filters.levelRange.max}`}
-            onValueChange={(value) => {
-              if (value === "all") {
+            onValueChange={(value: string) => {
+              if (value === "all")
                 updateFilter("levelRange", DEFAULT_LEVEL_RANGE);
-              } else {
+              else {
                 const [min, max] = value.split("-").map(Number);
                 updateFilter("levelRange", { min, max });
               }
@@ -98,7 +103,9 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
           </Label>
           <Select
             value={filters.objectiveType}
-            onValueChange={(value) => updateFilter("objectiveType", value)}
+            onValueChange={(value: FilterOptions["objectiveType"]) =>
+              updateFilter("objectiveType", value)
+            }
           >
             <SelectTrigger id="type-filter">
               <SelectValue />

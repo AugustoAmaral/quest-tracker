@@ -1,5 +1,5 @@
-import { Dialog, DialogContent } from '../ui/dialog';
-import { ImageWithFallback } from '../figma/ImageWithFallback';
+import { Dialog, DialogContent } from "../ui/dialog";
+import { ImageWithFallback } from "../figma/ImageWithFallback";
 
 interface ChestImageModalProps {
   isOpen: boolean;
@@ -8,16 +8,23 @@ interface ChestImageModalProps {
   mapName: string;
 }
 
-export function ChestImageModal({ isOpen, onClose, imageUrl, mapName }: ChestImageModalProps) {
+export function ChestImageModal({
+  isOpen,
+  onClose,
+  imageUrl,
+  mapName,
+}: ChestImageModalProps) {
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-5xl w-full max-w-[95vw] max-h-[95vh] p-4 overflow-hidden">
         <div className="flex flex-col gap-3">
           <div className="text-center">
             <h3 className="font-medium text-lg">Chest Locations - {mapName}</h3>
-            <p className="text-sm text-muted-foreground">Click outside to close</p>
+            <p className="text-sm text-muted-foreground">
+              Click outside to close
+            </p>
           </div>
-          
+
           <div className="flex justify-center">
             <ImageWithFallback
               src={imageUrl}

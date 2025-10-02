@@ -1,16 +1,16 @@
-import { Map, History, Settings } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Map, History, Settings } from "lucide-react";
+import { Button } from "../ui/button";
 
 interface BottomNavProps {
-  activeTab: 'maps' | 'history' | 'settings';
-  onTabChange: (tab: 'maps' | 'history' | 'settings') => void;
+  activeTab: "maps" | "history" | "settings";
+  onTabChange: (tab: "maps" | "history" | "settings") => void;
 }
 
 export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
   const tabs = [
-    { id: 'maps' as const, icon: Map, label: 'Maps' },
-    { id: 'history' as const, icon: History, label: 'History' },
-    { id: 'settings' as const, icon: Settings, label: 'Settings' }
+    { id: "maps" as const, icon: Map, label: "Maps" },
+    { id: "history" as const, icon: History, label: "History" },
+    { id: "settings" as const, icon: Settings, label: "Settings" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
           {tabs.map(({ id, icon: Icon, label }) => (
             <Button
               key={id}
-              variant={activeTab === id ? 'default' : 'ghost'}
+              variant={activeTab === id ? "default" : "ghost"}
               size="sm"
               onClick={() => onTabChange(id)}
               className="flex flex-col gap-1 h-12 px-3"

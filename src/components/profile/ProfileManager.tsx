@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Plus, Edit2, Trash2, User } from "lucide-react";
+import { User } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -96,7 +96,7 @@ export function ProfileManager({
       profiles.some(
         (p) =>
           p.id !== selectedProfile.id &&
-          p.name.toLowerCase() === trimmedName.toLowerCase()
+          p.name.toLowerCase() === trimmedName.toLowerCase(),
       )
     ) {
       setError("A profile with this name already exists");
@@ -189,7 +189,8 @@ export function ProfileManager({
               }}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  mode === "create" ? handleCreate() : handleEdit();
+                  if (mode === "create") handleCreate();
+                  else handleEdit();
                 }
               }}
               maxLength={50}

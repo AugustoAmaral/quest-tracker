@@ -1,5 +1,5 @@
-import { Progress } from '../ui/progress';
-import { COMPLETION_COLORS } from '../../utils/constants';
+import { Progress } from "../ui/progress";
+import { COMPLETION_COLORS } from "../../utils/constants";
 
 interface ProgressBarProps {
   completed: number;
@@ -8,9 +8,14 @@ interface ProgressBarProps {
   className?: string;
 }
 
-export function ProgressBar({ completed, total, showText = true, className = '' }: ProgressBarProps) {
+export function ProgressBar({
+  completed,
+  total,
+  showText = true,
+  className = "",
+}: ProgressBarProps) {
   const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
-  
+
   const getColor = () => {
     if (percentage === 0) return COMPLETION_COLORS.EMPTY;
     if (percentage === 100) return COMPLETION_COLORS.COMPLETE;
@@ -18,17 +23,17 @@ export function ProgressBar({ completed, total, showText = true, className = '' 
   };
 
   const getIcon = () => {
-    if (percentage === 100) return '⭐';
-    return '';
+    if (percentage === 100) return "⭐";
+    return "";
   };
 
   return (
     <div className={`space-y-1 ${className}`}>
-      <Progress 
-        value={percentage} 
+      <Progress
+        value={percentage}
         className="h-2"
         style={{
-          ['--progress-background' as any]: getColor()
+          ["--progress-background"]: getColor(),
         }}
       />
       {showText && (

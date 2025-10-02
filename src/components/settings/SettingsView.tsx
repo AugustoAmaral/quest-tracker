@@ -58,7 +58,7 @@ export function SettingsView({
       URL.revokeObjectURL(url);
 
       toast.success("Data exported successfully");
-    } catch (error) {
+    } catch {
       toast.error("Failed to export data");
     }
   };
@@ -81,7 +81,7 @@ export function SettingsView({
         } else {
           toast.error(result.error || "Failed to import data");
         }
-      } catch (error) {
+      } catch {
         toast.error("Failed to read file");
       } finally {
         setIsImporting(false);
@@ -105,8 +105,8 @@ export function SettingsView({
   const storageInfo = useMemo(() => {
     try {
       let totalSize = 0;
-      for (let key in localStorage) {
-        if (localStorage.hasOwnProperty(key)) {
+      for (const key in localStorage) {
+        if (Object.prototype.hasOwnProperty.call(localStorage, key)) {
           totalSize += localStorage[key].length + key.length;
         }
       }
@@ -115,14 +115,14 @@ export function SettingsView({
       const maxMB = 5; // Approximate localStorage limit
       const percentage = Math.min(
         (totalSize / (maxMB * 1024 * 1024)) * 100,
-        100
+        100,
       );
 
       return { used: `${usedMB} MB`, percentage: Math.round(percentage) };
-    } catch (error) {
+    } catch {
       return { used: "Unknown", percentage: 0 };
     }
-  }, [profiles]);
+  }, []);
 
   return (
     <div className="space-y-6 pb-20">
@@ -157,7 +157,7 @@ export function SettingsView({
                 <span className="text-sm font-medium">Last Activity:</span>
                 <span className="text-sm text-muted-foreground">
                   {new Date(
-                    activeProfile.statistics.lastActivity
+                    activeProfile.statistics.lastActivity,
                   ).toLocaleDateString()}
                 </span>
               </div>

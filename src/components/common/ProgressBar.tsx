@@ -33,7 +33,7 @@ export function ProgressBar({
         value={percentage}
         className="h-2"
         style={{
-          ["--progress-background"]: getColor(),
+          ["--progress-background" as string]: getColor(),
         }}
       />
       {showText && (

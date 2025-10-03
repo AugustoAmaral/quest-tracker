@@ -44,3 +44,10 @@ export const DEFAULT_LEVEL_RANGE = {
   min: 1,
   max: 150,
 };
+
+// Filter out all the options that are not fully created (they have the icon: icon-unknown.png)
+export const getVisibleObjectiveTypes = (): ObjectiveType[] => {
+  return Object.values(ObjectiveType).filter(
+    (type) => OBJECTIVE_ICONS[type] !== "/icon-unknown.png"
+  );
+};

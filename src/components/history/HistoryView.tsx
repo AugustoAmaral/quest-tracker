@@ -13,7 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { OBJECTIVE_LABELS } from "../../utils/constants";
+import { OBJECTIVE_LABELS, getVisibleObjectiveTypes } from "../../utils/constants";
 import { ObjectiveIcon } from "../common/ObjectiveIcon";
 
 interface HistoryViewProps {
@@ -156,7 +156,7 @@ export function HistoryView({
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All Types</SelectItem>
-                  {Object.values(ObjectiveType).map((type) => (
+                  {getVisibleObjectiveTypes().map((type) => (
                     <SelectItem key={type} value={type}>
                       <div className="flex items-center gap-2">
                         <ObjectiveIcon objectiveType={type} size="sm" />

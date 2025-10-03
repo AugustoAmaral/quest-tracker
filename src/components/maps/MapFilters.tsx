@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import { type FilterOptions, ObjectiveType } from "../../types";
+import { type FilterOptions } from "../../types";
 import { Input } from "../ui/input";
 import {
   Select,
@@ -9,7 +9,8 @@ import {
   SelectValue,
 } from "../ui/select";
 import { Label } from "../ui/label";
-import { OBJECTIVE_LABELS, DEFAULT_LEVEL_RANGE } from "../../utils/constants";
+import { OBJECTIVE_LABELS, DEFAULT_LEVEL_RANGE, getVisibleObjectiveTypes } from "../../utils/constants";
+import { ObjectiveIcon } from "../common/ObjectiveIcon";
 
 interface MapFiltersProps {
   filters: FilterOptions;
@@ -112,9 +113,12 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Types</SelectItem>
-              {Object.values(ObjectiveType).map((type) => (
+              {getVisibleObjectiveTypes().map((type) => (
                 <SelectItem key={type} value={type}>
-                  {OBJECTIVE_LABELS[type]}
+                  <div className="flex items-center gap-2">
+                    <ObjectiveIcon objectiveType={type} size="sm" />
+                    {OBJECTIVE_LABELS[type]}
+                  </div>
                 </SelectItem>
               ))}
             </SelectContent>

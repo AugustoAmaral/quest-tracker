@@ -95,7 +95,7 @@ export function Header({
           </DropdownMenu>
         </div>
         <div className="flex-1 text-center">
-          <h1 className="font-semibold">Ragnarok Tracker</h1>
+          <h1 className="font-semibold">Ragnarok M: Classic Quest Tracker</h1>
         </div>
         <div className="flex-1"></div>
       </div>

@@ -171,7 +171,15 @@ export default function App() {
             ) : (
               <div>
                 <MapFilters filters={filters} onFiltersChange={setFilters} />
-                <div className="p-4">
+                <div className="p-4 space-y-4">
+                  <div className="border border-yellow-500/50 bg-yellow-500/10 rounded-lg p-4">
+                    <h3 className="font-medium text-yellow-600 mb-1">
+                      Under Development
+                    </h3>
+                    <p className="text-sm text-yellow-600/90">
+                      This site is still under active development and being updated daily with new information. Bugs, changes, and adjustments are expected.
+                    </p>
+                  </div>
                   <RegionList
                     regions={gameData}
                     filters={filters}

@@ -35,7 +35,7 @@ export const gameData: Region[] = [
           max: 91,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -54,7 +54,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -73,7 +73,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -102,7 +102,7 @@ export const gameData: Region[] = [
           max: 129,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -122,7 +122,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/the-misty-forest.JPG",
-      }
+      },
     ],
   },
   {
@@ -161,7 +161,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/underwater-temple.JPG",
-      }
+      },
     ],
   },
   {
@@ -181,7 +181,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/payon-forest.JPG",
-      }
+      },
     ],
   },
   {
@@ -200,7 +200,7 @@ export const gameData: Region[] = [
           max: 110,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -219,7 +219,7 @@ export const gameData: Region[] = [
           max: 40,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -274,7 +274,7 @@ export const gameData: Region[] = [
           max: 72,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -294,7 +294,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/payon-south.JPG",
-      }
+      },
     ],
   },
   {
@@ -313,7 +313,7 @@ export const gameData: Region[] = [
           max: 60,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -332,7 +332,7 @@ export const gameData: Region[] = [
           max: 28,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -351,7 +351,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -388,7 +388,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -436,7 +436,7 @@ export const gameData: Region[] = [
           max: 124,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -456,7 +456,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/border-checkpoint.JPG",
-      }
+      },
     ],
   },
   {
@@ -503,7 +503,7 @@ export const gameData: Region[] = [
           max: 109,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -522,7 +522,7 @@ export const gameData: Region[] = [
           max: 65,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -532,6 +532,7 @@ export const gameData: Region[] = [
       min: 11,
       max: 30,
     },
+    verified: true,
     maps: [
       {
         id: "prontera",
@@ -540,7 +541,15 @@ export const gameData: Region[] = [
           min: 11,
           max: 30,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DAILY_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.KEY_QUEST,
+        ],
+        verified: true,
       },
       {
         id: "capitalsewer1f",
@@ -549,7 +558,12 @@ export const gameData: Region[] = [
           min: 11,
           max: 17,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
       },
       {
         id: "capitalsewer2f",
@@ -559,7 +573,8 @@ export const gameData: Region[] = [
           max: 30,
         },
         availableObjectiveTypes: [],
-      }
+        verified: true,
+      },
     ],
   },
   {
@@ -569,6 +584,7 @@ export const gameData: Region[] = [
       min: 1,
       max: 10,
     },
+    verified: true,
     maps: [
       {
         id: "pronterasouthgate",
@@ -577,9 +593,16 @@ export const gameData: Region[] = [
           min: 1,
           max: 10,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.KEY_QUEST,
+        ],
         chestImage: "/chests/prontera-south-gate.JPG",
-      }
+        verified: true,
+      },
     ],
   },
   {
@@ -617,7 +640,7 @@ export const gameData: Region[] = [
           max: 48,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -627,6 +650,7 @@ export const gameData: Region[] = [
       min: 13,
       max: 35,
     },
+    verified: true,
     maps: [
       {
         id: "labyrinthforest",
@@ -635,8 +659,9 @@ export const gameData: Region[] = [
           min: 13,
           max: 35,
         },
-        availableObjectiveTypes: [],
-      }
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT_QUEST],
+        verified: true,
+      },
     ],
   },
   {
@@ -646,6 +671,7 @@ export const gameData: Region[] = [
       min: 13,
       max: 21,
     },
+    verified: true,
     maps: [
       {
         id: "pronterawestgate",
@@ -654,9 +680,17 @@ export const gameData: Region[] = [
           min: 13,
           max: 21,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.SIDE_QUEST,
+        ],
         chestImage: "/chests/prontera-west-gate.JPG",
-      }
+        verified: true,
+      },
     ],
   },
   {
@@ -676,7 +710,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/morroc.JPG",
-      }
+      },
     ],
   },
   {
@@ -695,7 +729,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -724,7 +758,7 @@ export const gameData: Region[] = [
           max: 75,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -761,7 +795,7 @@ export const gameData: Region[] = [
           max: 80,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -799,7 +833,7 @@ export const gameData: Region[] = [
           max: 68,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -819,7 +853,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/mt-mjolnir.JPG",
-      }
+      },
     ],
   },
   {
@@ -838,7 +872,7 @@ export const gameData: Region[] = [
           max: 39,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -867,7 +901,7 @@ export const gameData: Region[] = [
           max: 81,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -887,7 +921,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/orc-village.JPG",
-      }
+      },
     ],
   },
   {
@@ -907,7 +941,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/lighthalzen-plain.JPG",
-      }
+      },
     ],
   },
   {
@@ -965,7 +999,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/homunculus-lab-underground-3f.JPG",
-      }
+      },
     ],
   },
   {
@@ -984,7 +1018,7 @@ export const gameData: Region[] = [
           max: 82,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1004,7 +1038,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/glast-heim-outskirt.JPG",
-      }
+      },
     ],
   },
   {
@@ -1079,7 +1113,7 @@ export const gameData: Region[] = [
           max: 90,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1107,7 +1141,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1135,7 +1169,7 @@ export const gameData: Region[] = [
           max: 138,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1172,7 +1206,7 @@ export const gameData: Region[] = [
           max: 141,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1200,7 +1234,7 @@ export const gameData: Region[] = [
           max: 0,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1219,7 +1253,7 @@ export const gameData: Region[] = [
           max: 125,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1274,7 +1308,7 @@ export const gameData: Region[] = [
           max: 135,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
   },
   {
@@ -1293,7 +1327,7 @@ export const gameData: Region[] = [
           max: 131,
         },
         availableObjectiveTypes: [],
-      }
+      },
     ],
-  }
+  },
 ];

@@ -1,8 +1,14 @@
-import { MapPin, Star } from "lucide-react";
+import { MapPin, Star, CheckCircle2 } from "lucide-react";
 import type { GameMap } from "../../types";
 import { Button } from "../ui/button";
 import { Checkbox } from "../ui/checkbox";
 import { ProgressBar } from "../common/ProgressBar";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 interface MapItemProps {
   map: GameMap;
@@ -46,6 +52,23 @@ export function MapItem({
             <h4 className={`truncate ${isComplete ? "line-through" : ""}`}>
               {map.name}
             </h4>
+            {map.verified && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span
+                      className="inline-flex"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>This map has been reviewed recently</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
             {isComplete && (
               <div className="flex items-center gap-1">
                 <Star className="h-4 w-4 text-yellow-500 flex-shrink-0" />

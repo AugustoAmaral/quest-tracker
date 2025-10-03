@@ -1,4 +1,4 @@
-import { ArrowLeft, Image as ImageIcon, ExternalLink } from "lucide-react";
+import { ArrowLeft, Image as ImageIcon, ExternalLink, CheckCircle2 } from "lucide-react";
 import { useState } from "react";
 import { type GameMap, ObjectiveType } from "../../types";
 import { Button } from "../ui/button";
@@ -47,7 +47,21 @@ export function MapDetail({
             <ArrowLeft className="h-4 w-4" />
           </Button>
           <div className="flex-1">
-            <h2 className="font-semibold">{map.name}</h2>
+            <div className="flex items-center gap-2">
+              <h2 className="font-semibold">{map.name}</h2>
+              {map.verified && (
+                <TooltipProvider>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>This map has been reviewed recently</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              )}
+            </div>
             <p className="text-sm text-muted-foreground">
               Level {map.levelRange.min}-{map.levelRange.max}
             </p>

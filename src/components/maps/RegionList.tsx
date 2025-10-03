@@ -1,10 +1,16 @@
 import { useState } from "react";
-import { ChevronDown, ChevronRight, Star } from "lucide-react";
+import { ChevronDown, ChevronRight, Star, CheckCircle2 } from "lucide-react";
 import type { Region, FilterOptions, ObjectiveType } from "../../types";
 import { Button } from "../ui/button";
 import { Card } from "../ui/card";
 import { ProgressBar } from "../common/ProgressBar";
 import { MapItem } from "./MapItem";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "../ui/tooltip";
 
 interface RegionListProps {
   regions: Region[];
@@ -145,6 +151,23 @@ export function RegionList({
                       <h3 className={isComplete ? "line-through" : ""}>
                         {region.name}
                       </h3>
+                      {region.verified && (
+                        <TooltipProvider>
+                          <Tooltip>
+                            <TooltipTrigger asChild>
+                              <span
+                                className="inline-flex"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <CheckCircle2 className="h-4 w-4 text-green-500 flex-shrink-0" />
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>This map has been reviewed recently</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      )}
                       {isComplete && (
                         <div className="flex items-center gap-1">
                           <Star className="h-4 w-4 text-yellow-500" />

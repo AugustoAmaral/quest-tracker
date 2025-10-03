@@ -26,6 +26,7 @@ export type GameMap = {
   };
   availableObjectiveTypes: ObjectiveType[];
   chestImage?: string;
+  verified?: boolean;
 };
 
 export type Region = {
@@ -36,6 +37,7 @@ export type Region = {
     max: number;
   };
   maps: GameMap[];
+  verified?: boolean;
 };
 
 export type CompletedObjective = {

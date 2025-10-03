@@ -1,0 +1,16 @@
+Region name:
+    Map name
+
+Prontera Region:
+    Prontera
+    Capital Sewer 1F
+    Capital Sewer 2F
+
+Prontera South Gate:
+    Prontera South Gate
+
+Prontera West Gate:
+    Prontera West Gate
+
+Labyrinth Forest:
+    Labyrinth Forest

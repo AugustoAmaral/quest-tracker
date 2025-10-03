@@ -92,16 +92,17 @@ export function RegionList({
 
   const filteredRegions = filterRegions(regions);
 
-  // Sort regions: incomplete first, 100% complete last
   const sortedRegions = filteredRegions.sort((a, b) => {
     const progressA = getRegionProgress(a);
     const progressB = getRegionProgress(b);
 
-    // Se uma região está 100% completa e a outra não, a completa vai para o final
     if (progressA.percentage === 100 && progressB.percentage !== 100) return 1;
     if (progressA.percentage !== 100 && progressB.percentage === 100) return -1;
 
-    // Caso contrário, mantém a ordem original (alfabética)
+    if (progressA.percentage !== 100 && progressB.percentage !== 100) {
+      return a.levelRange.min - b.levelRange.min;
+    }
+
     return a.name.localeCompare(b.name);
   });
 

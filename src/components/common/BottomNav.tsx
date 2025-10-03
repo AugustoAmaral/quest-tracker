@@ -15,7 +15,7 @@ export function BottomNav({ activeTab, onTabChange }: BottomNavProps) {
 
   return (
     <nav className="sticky bottom-0 z-50 w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container px-4">
+      <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-around">
           {tabs.map(({ id, icon: Icon, label }) => (
             <Button

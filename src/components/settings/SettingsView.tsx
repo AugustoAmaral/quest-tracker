@@ -6,6 +6,7 @@ import {
   User,
   Database,
   AlertTriangle,
+  ExternalLink,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
@@ -291,6 +292,20 @@ export function SettingsView({
           <div className="flex justify-between items-center">
             <span className="text-sm font-medium">Storage:</span>
             <Badge variant="outline">Local Storage</Badge>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium">Author:</span>
+            <Badge variant="outline">
+              <a 
+                href="https://github.com/AugustoAmaral" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:underline flex items-center gap-1"
+              >
+                Augusto Amaral
+                <ExternalLink className="h-3 w-3" />
+              </a>
+            </Badge>
           </div>
         </CardContent>
       </Card>

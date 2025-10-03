@@ -73,13 +73,19 @@ export function MapDetail({
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <ImageIcon className="h-8 w-8 mx-auto mb-2" />
-                  <p className="text-sm">Chest location map</p>
-                  <p className="text-xs">(Image would be displayed here)</p>
-                </div>
+              <div 
+                className="bg-muted rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity flex items-center justify-center"
+                onClick={handleChestImageClick}
+              >
+                <img
+                  src={map.chestImage}
+                  alt={`Chest locations in ${map.name}`}
+                  className="max-w-full h-auto"
+                />
               </div>
+              <p className="text-xs text-muted-foreground text-center mt-2">
+                Click to view full size
+              </p>
             </CardContent>
           </Card>
         )}

@@ -11,8 +11,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
-import { OBJECTIVE_ICONS, OBJECTIVE_LABELS } from "../../utils/constants";
+import { OBJECTIVE_LABELS } from "../../utils/constants";
 import { ChestImageModal } from "./ChestImageModal";
+import { ObjectiveIcon } from "../common/ObjectiveIcon";
 
 interface MapDetailProps {
   map: GameMap;
@@ -103,9 +104,7 @@ export function MapDetail({
                       }`}
                     >
                       <div className="flex items-center gap-3">
-                        <span className="text-xl">
-                          {OBJECTIVE_ICONS[objectiveType]}
-                        </span>
+                        <ObjectiveIcon objectiveType={objectiveType} />
                         <span className="flex-1">
                           {OBJECTIVE_LABELS[objectiveType]}
                         </span>

@@ -1,19 +1,19 @@
 import { ObjectiveType } from "../types";
 
 export const OBJECTIVE_ICONS: Record<ObjectiveType, string> = {
-  [ObjectiveType.MAIN_QUEST]: "📜",
-  [ObjectiveType.SIDE_QUEST]: "📋",
-  [ObjectiveType.DAILY_QUEST]: "🔄",
-  [ObjectiveType.SPECIAL_QUEST]: "✨",
-  [ObjectiveType.BARD_QUEST_TYPE1]: "🎵",
-  [ObjectiveType.BARD_QUEST_TYPE2]: "🎶",
-  [ObjectiveType.PHOTO_QUEST]: "📸",
-  [ObjectiveType.BATTLE_QUEST]: "⚔️",
-  [ObjectiveType.DELIVERY_QUEST_TYPE1]: "📦",
-  [ObjectiveType.DELIVERY_QUEST_TYPE2]: "📫",
-  [ObjectiveType.PHOTO_SPOT_TYPE1]: "📷",
-  [ObjectiveType.PHOTO_SPOT_TYPE2]: "🏞️",
-  [ObjectiveType.CHEST]: "💎",
+  [ObjectiveType.MAIN_QUEST]: "/icon-unknown.png",
+  [ObjectiveType.SIDE_QUEST]: "/icon-side-quest.png",
+  [ObjectiveType.DAILY_QUEST]: "/icon-daily-quest.png",
+  [ObjectiveType.SPECIAL_QUEST]: "/icon-special-quest.png",
+  [ObjectiveType.BARD_QUEST_TYPE1]: "/icon-bard-quest.png",
+  [ObjectiveType.BARD_QUEST_TYPE2]: "/icon-unknown.png",
+  [ObjectiveType.PHOTO_QUEST]: "/icon-photo.png",
+  [ObjectiveType.BATTLE_QUEST]: "/icon-battle-quest.png",
+  [ObjectiveType.DELIVERY_QUEST_TYPE1]: "/icon-delivery-quest.png",
+  [ObjectiveType.DELIVERY_QUEST_TYPE2]: "/icon-unknown.png",
+  [ObjectiveType.PHOTO_SPOT_TYPE1]: "/icon-photo.png",
+  [ObjectiveType.PHOTO_SPOT_TYPE2]: "/icon-unknown.png",
+  [ObjectiveType.CHEST]: "/icon-chest.png",
 };
 
 export const OBJECTIVE_LABELS: Record<ObjectiveType, string> = {

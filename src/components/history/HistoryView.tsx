@@ -13,7 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { OBJECTIVE_ICONS, OBJECTIVE_LABELS } from "../../utils/constants";
+import { OBJECTIVE_LABELS } from "../../utils/constants";
+import { ObjectiveIcon } from "../common/ObjectiveIcon";
 
 interface HistoryViewProps {
   completedObjectives: CompletedObjective[];
@@ -157,7 +158,10 @@ export function HistoryView({
                   <SelectItem value="all">All Types</SelectItem>
                   {Object.values(ObjectiveType).map((type) => (
                     <SelectItem key={type} value={type}>
-                      {OBJECTIVE_ICONS[type]} {OBJECTIVE_LABELS[type]}
+                      <div className="flex items-center gap-2">
+                        <ObjectiveIcon objectiveType={type} size="sm" />
+                        {OBJECTIVE_LABELS[type]}
+                      </div>
                     </SelectItem>
                   ))}
                 </SelectContent>
@@ -228,8 +232,8 @@ export function HistoryView({
             >
               <CardContent className="p-4">
                 <div className="flex items-start gap-3">
-                  <div className="text-2xl">
-                    {OBJECTIVE_ICONS[objective.objectiveType]}
+                  <div className="flex-shrink-0">
+                    <ObjectiveIcon objectiveType={objective.objectiveType} size="lg" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-medium truncate">

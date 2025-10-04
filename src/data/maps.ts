@@ -132,6 +132,7 @@ export const gameData: Region[] = [
       min: 23,
       max: 45,
     },
+    verified: true,
     maps: [
       {
         id: "bayanisland",
@@ -141,6 +142,7 @@ export const gameData: Region[] = [
           max: 45,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
       {
         id: "underwatercave",
@@ -149,8 +151,15 @@ export const gameData: Region[] = [
           min: 29,
           max: 40,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
         chestImage: "/chests/underwater-cave.JPG",
+        verified: true,
       },
       {
         id: "underwatertemple",
@@ -159,8 +168,13 @@ export const gameData: Region[] = [
           min: 23,
           max: 45,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BATTLE_QUEST,
+        ],
         chestImage: "/chests/underwater-temple.JPG",
+        verified: true,
       },
     ],
   },
@@ -846,6 +860,7 @@ export const gameData: Region[] = [
       min: 52,
       max: 68,
     },
+    verified: true,
     maps: [
       {
         id: "pyramid1f",
@@ -854,8 +869,13 @@ export const gameData: Region[] = [
           min: 52,
           max: 57,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
         chestImage: "/chests/pyramid-1f.JPG",
+        verified: true,
       },
       {
         id: "pyramid2f",
@@ -865,6 +885,7 @@ export const gameData: Region[] = [
           max: 68,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
       {
         id: "pyramid3f",
@@ -874,6 +895,7 @@ export const gameData: Region[] = [
           max: 68,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
     ],
   },

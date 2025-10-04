@@ -40,3 +40,13 @@ Morroc:
 
 Prontera North:
     Prontera North
+
+Bayan Island:
+    Bayan Island
+    Underwater Cave
+    Underwater Temple
+
+Pyramid 1F:
+    Pyramid 1F
+    Pyramid 2F
+    Pyramid 3F

@@ -210,6 +210,7 @@ export const gameData: Region[] = [
       min: 26,
       max: 40,
     },
+    verified: true,
     maps: [
       {
         id: "ghostship",
@@ -218,7 +219,8 @@ export const gameData: Region[] = [
           min: 26,
           max: 40,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+        verified: true,
       },
     ],
   },
@@ -323,6 +325,7 @@ export const gameData: Region[] = [
       min: 23,
       max: 28,
     },
+    verified: true,
     maps: [
       {
         id: "sunkenship",
@@ -331,7 +334,11 @@ export const gameData: Region[] = [
           min: 23,
           max: 28,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        verified: true,
       },
     ],
   },
@@ -342,6 +349,7 @@ export const gameData: Region[] = [
       min: 0,
       max: 0,
     },
+    verified: true,
     maps: [
       {
         id: "izludeisland",
@@ -350,7 +358,13 @@ export const gameData: Region[] = [
           min: 0,
           max: 0,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
+        verified: true,
       },
     ],
   },
@@ -513,6 +527,7 @@ export const gameData: Region[] = [
       min: 55,
       max: 65,
     },
+    verified: true,
     maps: [
       {
         id: "pronteranorth",
@@ -521,7 +536,12 @@ export const gameData: Region[] = [
           min: 55,
           max: 65,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+        ],
+        verified: true,
       },
     ],
   },
@@ -612,6 +632,7 @@ export const gameData: Region[] = [
       min: 40,
       max: 51,
     },
+    verified: true,
     maps: [
       {
         id: "sogratdesert",
@@ -620,8 +641,13 @@ export const gameData: Region[] = [
           min: 40,
           max: 51,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
         chestImage: "/chests/sograt-desert.JPG",
+        verified: true,
       },
       {
         id: "anthell1f",
@@ -631,6 +657,7 @@ export const gameData: Region[] = [
           max: 48,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
       {
         id: "anthell2f",
@@ -640,6 +667,7 @@ export const gameData: Region[] = [
           max: 48,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
     ],
   },
@@ -659,7 +687,10 @@ export const gameData: Region[] = [
           min: 13,
           max: 35,
         },
-        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT_QUEST],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
         verified: true,
       },
     ],
@@ -700,6 +731,7 @@ export const gameData: Region[] = [
       min: 49,
       max: 55,
     },
+    verified: true,
     maps: [
       {
         id: "morrroc",
@@ -708,8 +740,17 @@ export const gameData: Region[] = [
           min: 49,
           max: 55,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
         chestImage: "/chests/morroc.JPG",
+        verified: true,
       },
     ],
   },
@@ -843,6 +884,7 @@ export const gameData: Region[] = [
       min: 20,
       max: 45,
     },
+    verified: true,
     maps: [
       {
         id: "mjolnirmountains",
@@ -851,8 +893,14 @@ export const gameData: Region[] = [
           min: 20,
           max: 45,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
         chestImage: "/chests/mt-mjolnir.JPG",
+        verified: true,
       },
     ],
   },
@@ -863,6 +911,7 @@ export const gameData: Region[] = [
       min: 35,
       max: 39,
     },
+    verified: true,
     maps: [
       {
         id: "goblinforest",
@@ -871,7 +920,12 @@ export const gameData: Region[] = [
           min: 35,
           max: 39,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+        ],
+        verified: true,
       },
     ],
   },

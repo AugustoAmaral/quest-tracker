@@ -14,3 +14,29 @@ Prontera West Gate:
 
 Labyrinth Forest:
     Labyrinth Forest
+
+Sunken Ship:
+    Sunken Ship
+
+Mjolnir Mountains:
+    Mjolnir Mountains
+
+Goblin Forest:
+    Goblin Forest
+
+Ghost Ship:
+    Ghost Ship
+
+Sograt Desert:
+    Sograt Desert
+    Ant Hell 1F
+    Ant Hell 2F
+
+Izlude Island:
+    Izlude Island
+
+Morroc:
+    Morroc
+
+Prontera North:
+    Prontera North

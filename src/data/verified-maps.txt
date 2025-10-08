@@ -1,7 +1,40 @@
 Region name:
     Map name
 
-Prontera Region:
+Bayan Island:
+    Bayan Island
+    Underwater Cave
+    Underwater Temple
+
+Payon Forest:
+    Payon Forest
+
+Ghost Ship:
+    Ghost Ship
+
+Payon:
+    Payon
+    Payon Cave 1F
+    Payon Cave 2F
+    Payon Cave 3F
+    Poring Island
+
+Payon South:
+    Payon South
+
+Payon Forest South:
+    Payon Forest South
+
+Sunken Ship:
+    Sunken Ship
+
+Izlude Island:
+    Izlude Island
+
+Prontera North:
+    Prontera North
+
+Prontera:
     Prontera
     Capital Sewer 1F
     Capital Sewer 2F
@@ -9,14 +42,33 @@ Prontera Region:
 Prontera South Gate:
     Prontera South Gate
 
-Prontera West Gate:
-    Prontera West Gate
+Sograt Desert:
+    Sograt Desert
+    Ant Hell 1F
+    Ant Hell 2F
 
 Labyrinth Forest:
     Labyrinth Forest
 
-Sunken Ship:
-    Sunken Ship
+Prontera West Gate:
+    Prontera West Gate
+
+Morrroc:
+    Morrroc
+
+Kordt Forest:
+    Kordt Forest
+    Kordt Forest Depth
+
+Geffen:
+    Geffen
+    Geffen Dungeon
+    Underground Geffen 2F
+
+Pyramid 1F:
+    Pyramid 1F
+    Pyramid 2F
+    Pyramid 3F
 
 Mjolnir Mountains:
     Mjolnir Mountains
@@ -24,29 +76,24 @@ Mjolnir Mountains:
 Goblin Forest:
     Goblin Forest
 
-Ghost Ship:
-    Ghost Ship
+Orc Vilage:
+    Orc Vilage
+    Orc Dungeon
 
-Sograt Desert:
-    Sograt Desert
-    Ant Hell 1F
-    Ant Hell 2F
+Orc Vilage South:
+    Orc Vilage South
 
-Izlude Island:
-    Izlude Island
+Glast Heim Outskirts:
+    Glast Heim Outskirts
 
-Morroc:
-    Morroc
+Glast Heim Outskirt:
+    Glast Heim Outskirt
 
-Prontera North:
-    Prontera North
-
-Bayan Island:
-    Bayan Island
-    Underwater Cave
-    Underwater Temple
-
-Pyramid 1F:
-    Pyramid 1F
-    Pyramid 2F
-    Pyramid 3F
+Glast Heim:
+    Glast Heim
+    Glast Heim Culvert
+    Glast Heim Chivalry
+    Glast Heim Hall
+    Glast Heim Wing
+    Glast Heim Churchyard
+    Glast Heim Churchyard 2F

@@ -16,7 +16,7 @@ export const gameData: Region[] = [
           min: 78,
           max: 91,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
       {
         id: "toyfactory1f",
@@ -25,7 +25,10 @@ export const gameData: Region[] = [
           min: 78,
           max: 83,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
       },
       {
         id: "toyfactory2f",
@@ -34,7 +37,7 @@ export const gameData: Region[] = [
           min: 87,
           max: 91,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
       },
     ],
   },
@@ -141,7 +144,10 @@ export const gameData: Region[] = [
           min: 23,
           max: 45,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
         verified: true,
       },
       {
@@ -185,6 +191,7 @@ export const gameData: Region[] = [
       min: 59,
       max: 62,
     },
+    verified: true,
     maps: [
       {
         id: "payonforest",
@@ -193,7 +200,12 @@ export const gameData: Region[] = [
           min: 59,
           max: 62,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
         chestImage: "/chests/payon-forest.JPG",
       },
     ],
@@ -245,6 +257,7 @@ export const gameData: Region[] = [
       min: 61,
       max: 72,
     },
+    verified: true,
     maps: [
       {
         id: "payon",
@@ -253,7 +266,15 @@ export const gameData: Region[] = [
           min: 61,
           max: 72,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+        ],
+        verified: true,
       },
       {
         id: "payoncave1f",
@@ -262,7 +283,8 @@ export const gameData: Region[] = [
           min: 61,
           max: 65,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT_QUEST],
+        verified: true,
       },
       {
         id: "payoncave2f",
@@ -271,7 +293,11 @@ export const gameData: Region[] = [
           min: 65,
           max: 72,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+        ],
+        verified: true,
       },
       {
         id: "payoncave3f",
@@ -281,6 +307,7 @@ export const gameData: Region[] = [
           max: 72,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
       {
         id: "poringisland",
@@ -290,6 +317,7 @@ export const gameData: Region[] = [
           max: 72,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
     ],
   },
@@ -300,6 +328,7 @@ export const gameData: Region[] = [
       min: 56,
       max: 60,
     },
+    verified: true,
     maps: [
       {
         id: "payonsouth",
@@ -308,7 +337,12 @@ export const gameData: Region[] = [
           min: 56,
           max: 60,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
         chestImage: "/chests/payon-south.JPG",
       },
     ],
@@ -320,6 +354,7 @@ export const gameData: Region[] = [
       min: 56,
       max: 60,
     },
+    verified: true,
     maps: [
       {
         id: "payonforestsouth",
@@ -329,6 +364,7 @@ export const gameData: Region[] = [
           max: 60,
         },
         availableObjectiveTypes: [],
+        verified: true,
       },
     ],
   },
@@ -762,6 +798,7 @@ export const gameData: Region[] = [
           ObjectiveType.SIDE_QUEST,
           ObjectiveType.HAT_QUEST,
           ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
         ],
         chestImage: "/chests/morroc.JPG",
         verified: true,
@@ -794,6 +831,7 @@ export const gameData: Region[] = [
       min: 72,
       max: 75,
     },
+    verified: true,
     maps: [
       {
         id: "kordtforest",
@@ -802,7 +840,14 @@ export const gameData: Region[] = [
           min: 72,
           max: 75,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
         chestImage: "/chests/kordt-forest.JPG",
       },
       {
@@ -812,6 +857,7 @@ export const gameData: Region[] = [
           min: 72,
           max: 75,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
     ],
@@ -823,6 +869,7 @@ export const gameData: Region[] = [
       min: 74,
       max: 80,
     },
+    verified: true,
     maps: [
       {
         id: "geffen",
@@ -831,7 +878,13 @@ export const gameData: Region[] = [
           min: 74,
           max: 80,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.PHOTO_SPOT,
+        ],
       },
       {
         id: "geffendungeon",
@@ -840,7 +893,15 @@ export const gameData: Region[] = [
           min: 74,
           max: 80,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
       },
       {
         id: "undergroundgeffen2f",
@@ -849,6 +910,7 @@ export const gameData: Region[] = [
           min: 74,
           max: 80,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
     ],
@@ -873,6 +935,8 @@ export const gameData: Region[] = [
           ObjectiveType.CHEST,
           ObjectiveType.PHOTO_SPOT_QUEST,
           ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
         ],
         chestImage: "/chests/pyramid-1f.JPG",
         verified: true,
@@ -884,7 +948,7 @@ export const gameData: Region[] = [
           min: 64,
           max: 68,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.COLLECTION_QUEST_TYPE],
         verified: true,
       },
       {
@@ -958,6 +1022,7 @@ export const gameData: Region[] = [
       min: 70,
       max: 81,
     },
+    verified: true,
     maps: [
       {
         id: "orcvilage",
@@ -966,7 +1031,14 @@ export const gameData: Region[] = [
           min: 70,
           max: 73,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+        ],
+        verified: true,
         chestImage: "/chests/orc-village.JPG",
       },
       {
@@ -976,6 +1048,7 @@ export const gameData: Region[] = [
           min: 75,
           max: 81,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
     ],
@@ -987,6 +1060,7 @@ export const gameData: Region[] = [
       min: 70,
       max: 73,
     },
+    verified: true,
     maps: [
       {
         id: "orcvilagesouth",
@@ -997,6 +1071,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
         chestImage: "/chests/orc-village.JPG",
+        verified: true,
       },
     ],
   },
@@ -1085,6 +1160,7 @@ export const gameData: Region[] = [
       min: 76,
       max: 82,
     },
+    verified: true,
     maps: [
       {
         id: "glastheimoutskirts",
@@ -1093,6 +1169,7 @@ export const gameData: Region[] = [
           min: 76,
           max: 82,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
     ],
@@ -1104,6 +1181,7 @@ export const gameData: Region[] = [
       min: 76,
       max: 82,
     },
+    verified: true,
     maps: [
       {
         id: "glastheimoutskirt",
@@ -1112,7 +1190,14 @@ export const gameData: Region[] = [
           min: 76,
           max: 82,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
         chestImage: "/chests/glast-heim-outskirt.JPG",
       },
     ],
@@ -1124,6 +1209,7 @@ export const gameData: Region[] = [
       min: 80,
       max: 99,
     },
+    verified: true,
     maps: [
       {
         id: "glastheim",
@@ -1132,7 +1218,16 @@ export const gameData: Region[] = [
           min: 80,
           max: 82,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.HAT_QUEST,
+        ],
+        verified: true,
         chestImage: "/chests/glast-heim.JPG",
       },
       {
@@ -1142,7 +1237,11 @@ export const gameData: Region[] = [
           min: 83,
           max: 89,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
         chestImage: "/chests/glast-heim-culvert.JPG",
       },
       {
@@ -1152,7 +1251,8 @@ export const gameData: Region[] = [
           min: 91,
           max: 95,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
       },
       {
         id: "glastheimhall",
@@ -1161,7 +1261,11 @@ export const gameData: Region[] = [
           min: 94,
           max: 99,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.DAILY_QUEST,
+        ],
       },
       {
         id: "glastheimwing",
@@ -1170,6 +1274,7 @@ export const gameData: Region[] = [
           min: 94,
           max: 99,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
       {
@@ -1179,7 +1284,11 @@ export const gameData: Region[] = [
           min: 84,
           max: 90,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
       },
       {
         id: "glastheimchurchyard2f",
@@ -1188,6 +1297,7 @@ export const gameData: Region[] = [
           min: 84,
           max: 90,
         },
+        verified: true,
         availableObjectiveTypes: [],
       },
     ],

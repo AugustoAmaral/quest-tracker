@@ -8,6 +8,7 @@ import { useProgress } from "../hooks/useProgress";
 import { Toaster } from "../components/ui/sonner";
 import { gameData } from "../data/maps";
 import { WELCOME_DIALOG_KEY } from "../utils/constants";
+import { clearAllData } from "../utils/storage";
 
 const RootLayout = () => {
   const {
@@ -28,6 +29,16 @@ const RootLayout = () => {
     isOpen: false,
     mode: null,
   });
+
+  useEffect(() => {
+    const shouldClear = sessionStorage.getItem("clearDataOnReload");
+    if (shouldClear === "true") {
+      clearAllData();
+      sessionStorage.removeItem("clearDataOnReload");
+      window.location.reload();
+    }
+  }, []);
+
   useEffect(() => {
     if (!isLoading && progress.profiles.length === 0) {
       const hasSeenWelcome = localStorage.getItem(WELCOME_DIALOG_KEY);

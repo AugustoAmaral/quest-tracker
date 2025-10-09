@@ -1,7 +1,6 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { SettingsView } from "../components/settings/SettingsView";
 import { useProgress } from "../hooks/useProgress";
-import { clearAllData } from "../utils/storage";
 import { gameData } from "../data/maps";
 
 export const Route = createFileRoute("/settings")({
@@ -10,13 +9,16 @@ export const Route = createFileRoute("/settings")({
 
 function Settings() {
   const navigate = useNavigate();
-  const { progress, activeProfile, importData, exportData } = useProgress(gameData);
+  const { progress, activeProfile, importData, exportData } =
+    useProgress(gameData);
 
   const handleClearAllData = () => {
     try {
-      clearAllData();
+      sessionStorage.setItem("clearDataOnReload", "true");
       navigate({ to: "/" });
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 1);
     } catch (error) {
       console.error("Error clearing data:", error);
     }

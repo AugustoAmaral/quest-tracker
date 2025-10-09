@@ -15,5 +15,11 @@ Chest location maps were created by **MrSho** and shared in the Ragnarok Origin 
 
 A huge thank you to MrSho for creating and sharing these valuable resources with the community! 🙏
 
+### Additional Chest Locations
+Special thanks to **@BlueBerries_YT** for the video tutorial that helped complete the remaining chest locations:
+- [Chest Location Video Guide](https://www.youtube.com/watch?v=rL4Lmz2SZj8)
+
+Thank you for the comprehensive guide! 🎮
+
 ## Special Thanks
 Thank you to all contributors and community members who have helped make this project better.

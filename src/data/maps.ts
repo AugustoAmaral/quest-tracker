@@ -28,7 +28,10 @@ export const gameData: Region[] = [
         availableObjectiveTypes: [
           ObjectiveType.CHEST,
           ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DELIVERY_QUEST,
         ],
+        chestImage: "/chests/toy-factory-1f.png",
       },
       {
         id: "toyfactory2f",
@@ -470,7 +473,11 @@ export const gameData: Region[] = [
           min: 116,
           max: 119,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
+        chestImage: "/chests/einbroch-field.png",
       },
       {
         id: "magmadungeon1f",
@@ -557,7 +564,12 @@ export const gameData: Region[] = [
           min: 101,
           max: 108,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.DAILY_QUEST,
+        ],
+        chestImage: "/chests/clock-tower-2f.png",
       },
       {
         id: "clocktowerb1",
@@ -566,7 +578,8 @@ export const gameData: Region[] = [
           min: 105,
           max: 109,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/clock-tower-b1.png",
       },
     ],
   },
@@ -1289,6 +1302,7 @@ export const gameData: Region[] = [
           ObjectiveType.CHEST,
           ObjectiveType.COLLECTION_QUEST_TYPE,
         ],
+        chestImage: "/chests/glast-heim-churchyard.png",
       },
       {
         id: "glastheimchurchyard2f",

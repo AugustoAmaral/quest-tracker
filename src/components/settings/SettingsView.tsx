@@ -381,6 +381,15 @@ export function SettingsView({
                   <ExternalLink className="h-4 w-4" />
                   Chest Locations - Part 2
                 </a>
+                <a
+                  href="https://www.youtube.com/watch?v=rL4Lmz2SZj8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Additional Locations by @BlueBerries_YT
+                </a>
               </div>
             </div>
 

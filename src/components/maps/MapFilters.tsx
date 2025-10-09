@@ -1,4 +1,4 @@
-import { Search } from "lucide-react";
+import { Search, X } from "lucide-react";
 import { type FilterOptions } from "../../types";
 import { Input } from "../ui/input";
 import {
@@ -11,6 +11,7 @@ import {
 import { Label } from "../ui/label";
 import { OBJECTIVE_LABELS, DEFAULT_LEVEL_RANGE, getVisibleObjectiveTypes } from "../../utils/constants";
 import { ObjectiveIcon } from "../common/ObjectiveIcon";
+import { Button } from "../ui/button";
 
 interface MapFiltersProps {
   filters: FilterOptions;
@@ -137,8 +138,10 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
         filters.levelRange.min !== DEFAULT_LEVEL_RANGE.min ||
         filters.levelRange.max !== DEFAULT_LEVEL_RANGE.max ||
         filters.objectiveType !== "all") && (
-        <div className="pt-2">
-          <button
+        <div className="pt-2 flex justify-between items-center">
+          <Button
+            variant="ghost"
+            size="sm"
             onClick={() =>
               onFiltersChange({
                 search: "",
@@ -147,10 +150,11 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
                 objectiveType: "all",
               })
             }
-            className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            className="text-sm"
           >
+            <X className="h-4 w-4 mr-2" />
             Clear all filters
-          </button>
+          </Button>
         </div>
       )}
     </div>

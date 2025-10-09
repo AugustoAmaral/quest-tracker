@@ -28,7 +28,7 @@ export const OBJECTIVE_LABELS: Record<ObjectiveType, string> = {
   [ObjectiveType.BARD_QUEST_TYPE1]: "Bard Quest",
   [ObjectiveType.BARD_QUEST_TYPE2]: "Bard Quest Type 2",
   [ObjectiveType.BATTLE_QUEST]: "Battle Quest",
-  [ObjectiveType.COLLECTION_QUEST_TYPE]: "Collection Quest",
+  [ObjectiveType.COLLECTION_QUEST_TYPE]: "Collection Quest (Toys)",
   [ObjectiveType.DELIVERY_QUEST]: "Delivery Quest",
   [ObjectiveType.PHOTO_SPOT]: "Photo Spot",
   [ObjectiveType.CHEST]: "Chest",
@@ -47,9 +47,11 @@ export const DEFAULT_LEVEL_RANGE = {
   max: 150,
 };
 
+export const WELCOME_DIALOG_KEY = "hasSeenWelcomeDialog";
+
 // Filter out all the options that are not fully created (they have the icon: icon-unknown.png)
 export const getVisibleObjectiveTypes = (): ObjectiveType[] => {
   return Object.values(ObjectiveType).filter(
-    (type) => OBJECTIVE_ICONS[type] !== "/icon-unknown.png"
+    (type) => OBJECTIVE_ICONS[type] !== "/icon-unknown.png",
   );
 };

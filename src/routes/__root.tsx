@@ -7,6 +7,7 @@ import { ProfileManager } from "../components/profile/ProfileManager";
 import { useProgress } from "../hooks/useProgress";
 import { Toaster } from "../components/ui/sonner";
 import { gameData } from "../data/maps";
+import { WELCOME_DIALOG_KEY } from "../utils/constants";
 
 const RootLayout = () => {
   const {
@@ -27,14 +28,29 @@ const RootLayout = () => {
     isOpen: false,
     mode: null,
   });
-
-  // Show create profile dialog if no profiles exist
   useEffect(() => {
     if (!isLoading && progress.profiles.length === 0) {
-      setProfileDialog({
-        isOpen: true,
-        mode: "create",
-      });
+      const hasSeenWelcome = localStorage.getItem(WELCOME_DIALOG_KEY);
+
+      if (hasSeenWelcome === "true") {
+        setProfileDialog({
+          isOpen: true,
+          mode: "create",
+        });
+      } else {
+        const checkWelcomeDialog = setInterval(() => {
+          const welcomeSeen = localStorage.getItem(WELCOME_DIALOG_KEY);
+          if (welcomeSeen === "true") {
+            setProfileDialog({
+              isOpen: true,
+              mode: "create",
+            });
+            clearInterval(checkWelcomeDialog);
+          }
+        }, 100);
+
+        return () => clearInterval(checkWelcomeDialog);
+      }
     }
   }, [isLoading, progress.profiles.length]);
 

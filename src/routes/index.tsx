@@ -2,6 +2,7 @@ import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback } from "react";
 import { MapFilters } from "../components/maps/MapFilters";
 import { RegionList } from "../components/maps/RegionList";
+import { WelcomeDialog } from "../components/common/WelcomeDialog";
 import { useProgress } from "../hooks/useProgress";
 import type { FilterOptions } from "../types";
 import { DEFAULT_LEVEL_RANGE } from "../utils/constants";
@@ -107,6 +108,7 @@ function Index() {
 
   return (
     <div>
+      <WelcomeDialog />
       <MapFilters filters={filters} onFiltersChange={handleFiltersChange} />
       <div className="p-4 space-y-6">
         <div className="border border-yellow-500/50 bg-yellow-500/10 rounded-lg p-4 text-center">

@@ -5,6 +5,7 @@ import {
   type Statistics,
   ObjectiveType,
 } from "../types";
+import { WELCOME_DIALOG_KEY } from "./constants";
 
 const STORAGE_KEY = "ragnarok_progress";
 const BACKUP_KEY = "ragnarok_progress_backup";
@@ -160,6 +161,7 @@ export const clearAllData = (): boolean => {
   try {
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(BACKUP_KEY);
+    localStorage.removeItem(WELCOME_DIALOG_KEY);
     return true;
   } catch {
     console.error("Error clearing data");

@@ -43,7 +43,7 @@ export const COMPLETION_COLORS = {
 };
 
 export const DEFAULT_LEVEL_RANGE = {
-  min: 1,
+  min: 0,
   max: 150,
 };
 

@@ -412,8 +412,8 @@ export const gameData: Region[] = [
     id: "izludeisland",
     name: "Izlude Island",
     levelRange: {
-      min: 0,
-      max: 0,
+      min: 20,
+      max: 20,
     },
     verified: true,
     maps: [
@@ -421,8 +421,8 @@ export const gameData: Region[] = [
         id: "izludeisland",
         name: "Izlude Island",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 20,
+          max: 20,
         },
         availableObjectiveTypes: [
           ObjectiveType.SIDE_QUEST,
@@ -439,16 +439,16 @@ export const gameData: Region[] = [
     id: "yuno",
     name: "Yuno",
     levelRange: {
-      min: 0,
-      max: 0,
+      min: 100,
+      max: 100,
     },
     maps: [
       {
         id: "yuno",
         name: "Yuno",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 100,
+          max: 100,
         },
         availableObjectiveTypes: [],
       },
@@ -456,8 +456,8 @@ export const gameData: Region[] = [
         id: "thanatostower",
         name: "Thanatos Tower",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 100,
+          max: 100,
         },
         availableObjectiveTypes: [],
       },
@@ -465,8 +465,8 @@ export const gameData: Region[] = [
         id: "unlimitedlibrary",
         name: "Unlimited Library",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 100,
+          max: 100,
         },
         availableObjectiveTypes: [],
       },

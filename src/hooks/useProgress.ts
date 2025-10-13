@@ -170,6 +170,8 @@ export function useProgress(gameData: Region[]) {
       const activeProfile = getActiveProfile();
       if (!activeProfile) return { completed: 0, percentage: 0 };
 
+      if (totalObjectiveTypes === 0) return { completed: 0, percentage: 100 };
+
       const completed = activeProfile.completedObjectives.filter(
         (obj) => obj.mapId === mapId,
       ).length;
@@ -194,7 +196,15 @@ export function useProgress(gameData: Region[]) {
       let completedObjectives = 0;
 
       region.maps.forEach((map) => {
-        totalObjectives += map.availableObjectiveTypes.length;
+        const mapObjectivesCount = map.availableObjectiveTypes.length;
+
+        // Se o mapa não tem objetivos, considerar como completo
+        if (mapObjectivesCount === 0) {
+          // Não adiciona ao total, pois não há objetivos para completar
+          return;
+        }
+
+        totalObjectives += mapObjectivesCount;
         completedObjectives += activeProfile.completedObjectives.filter(
           (obj) => obj.mapId === map.id,
         ).length;
@@ -203,7 +213,7 @@ export function useProgress(gameData: Region[]) {
       const percentage =
         totalObjectives > 0
           ? Math.round((completedObjectives / totalObjectives) * 100)
-          : 0;
+          : 100; // Se não há objetivos na região, considerar 100% completa
 
       return {
         completed: completedObjectives,

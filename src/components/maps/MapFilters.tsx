@@ -87,8 +87,8 @@ export function MapFilters({ filters, onFiltersChange }: MapFiltersProps) {
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="1-150">All Levels</SelectItem>
-              <SelectItem value="1-20">1-20</SelectItem>
+              <SelectItem value="0-150">All Levels</SelectItem>
+              <SelectItem value="0-20">0-20</SelectItem>
               <SelectItem value="20-40">20-40</SelectItem>
               <SelectItem value="40-60">40-60</SelectItem>
               <SelectItem value="60-80">60-80</SelectItem>

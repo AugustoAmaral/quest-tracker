@@ -151,6 +151,9 @@ export const gameData: Region[] = [
           ObjectiveType.SIDE_QUEST,
           ObjectiveType.PHOTO_SPOT,
         ],
+        questComment: {
+          [ObjectiveType.SIDE_QUEST]: "Need to finish the main quest first",
+        },
         verified: true,
       },
       {
@@ -162,11 +165,16 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [
           ObjectiveType.CHEST,
+          ObjectiveType.SIDE_QUEST,
           ObjectiveType.PHOTO_SPOT_QUEST,
           ObjectiveType.PHOTO_SPOT,
           ObjectiveType.BATTLE_QUEST,
           ObjectiveType.COLLECTION_QUEST_TYPE,
         ],
+        questComment: {
+          [ObjectiveType.SIDE_QUEST]:
+            "Need to finish Bayan Island side quest first",
+        },
         chestImage: "/chests/underwater-cave.JPG",
         verified: true,
       },
@@ -179,9 +187,14 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [
           ObjectiveType.CHEST,
+          ObjectiveType.SIDE_QUEST,
           ObjectiveType.PHOTO_SPOT,
           ObjectiveType.BATTLE_QUEST,
         ],
+        questComment: {
+          [ObjectiveType.SIDE_QUEST]:
+            "Need to finish Izlude side quest first",
+        },
         chestImage: "/chests/underwater-temple.JPG",
         verified: true,
       },
@@ -413,6 +426,7 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [
           ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DAILY_QUEST,
           ObjectiveType.PHOTO_SPOT_QUEST,
           ObjectiveType.PHOTO_SPOT,
           ObjectiveType.BARD_QUEST_TYPE1,

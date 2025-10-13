@@ -30,7 +30,6 @@ function Index() {
   const search = Route.useSearch();
   const { getMapProgress, toggleMapComplete } = useProgress(gameData);
 
-  // Convert search params to FilterOptions format
   const filters: FilterOptions = {
     search: search.search,
     completionStatus: search.completionStatus,

@@ -25,6 +25,7 @@ export type GameMap = {
     max: number;
   };
   availableObjectiveTypes: ObjectiveType[];
+  questComment?: Partial<Record<ObjectiveType, string>>;
   chestImage?: string;
   verified?: boolean;
 };

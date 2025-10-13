@@ -1,4 +1,9 @@
-import { ArrowLeft, Image as ImageIcon, ExternalLink, CheckCircle2 } from "lucide-react";
+import {
+  ArrowLeft,
+  Image as ImageIcon,
+  ExternalLink,
+  CheckCircle2,
+} from "lucide-react";
 import { useState } from "react";
 import { type GameMap, ObjectiveType } from "../../types";
 import { Button } from "../ui/button";
@@ -87,7 +92,7 @@ export function MapDetail({
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div 
+              <div
                 className="bg-muted rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity flex items-center justify-center"
                 onClick={handleChestImageClick}
               >
@@ -125,11 +130,17 @@ export function MapDetail({
                     >
                       <div className="flex items-center gap-3">
                         <ObjectiveIcon objectiveType={objectiveType} />
-                        <span className="flex-1">
-                          {OBJECTIVE_LABELS[objectiveType]}
-                        </span>
+                        <div className="flex-1 flex flex-col gap-1">
+                          <span>
+                            {OBJECTIVE_LABELS[objectiveType]}
+                          </span>
+                          {map.questComment?.[objectiveType] && (
+                            <span className="text-xs text-muted-foreground italic">
+                              {map.questComment[objectiveType]}
+                            </span>
+                          )}
+                        </div>
 
-                        {/* Ícone de link para imagem de baú */}
                         {objectiveType === ObjectiveType.CHEST &&
                           map.chestImage && (
                             <TooltipProvider>

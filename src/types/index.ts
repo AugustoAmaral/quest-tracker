@@ -7,11 +7,12 @@ export const ObjectiveType = {
   HAT_QUEST: "hat_quest",
   PHOTO_SPOT_QUEST: "photo_spot_quest",
   BARD_QUEST_TYPE1: "bard_quest_1",
-  BARD_QUEST_TYPE2: "bard_quest_2",
   BATTLE_QUEST: "battle_quest",
   COLLECTION_QUEST_TYPE: "collection_quest",
   DELIVERY_QUEST: "delivery_quest",
   PHOTO_SPOT: "photo_spot",
+  BLUE_STAR_QUEST: "blue_star_quest",
+  BLUE_STAR_CHEST_QUEST: "blue_star_chest_quest",
   CHEST: "chest",
 } as const;
 

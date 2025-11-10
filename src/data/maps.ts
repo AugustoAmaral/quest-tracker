@@ -2,31 +2,13 @@ import { type Region, ObjectiveType } from "../types";
 
 export const gameData: Region[] = [
   {
-    id: "niflheim",
-    name: "Niflheim",
-    levelRange: {
-      min: 0,
-      max: 0,
-    },
-    maps: [
-      {
-        id: "niflheim",
-        name: "Niflheim",
-        levelRange: {
-          min: 0,
-          max: 0,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
     id: "amatsu",
     name: "Amatsu",
     levelRange: {
       min: 0,
       max: 0,
     },
+    verified: true,
     maps: [
       {
         id: "amatsu",
@@ -35,7 +17,11 @@ export const gameData: Region[] = [
           min: 0,
           max: 0,
         },
-        availableObjectiveTypes: [],
+        verified: true,
+        availableObjectiveTypes: [
+          ObjectiveType.KEY_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
       },
     ],
   },
@@ -90,25 +76,30 @@ export const gameData: Region[] = [
     id: "luoyang",
     name: "Luoyang",
     levelRange: {
-      min: 0,
-      max: 0,
+      min: 121,
+      max: 125,
     },
     maps: [
       {
         id: "luoyang",
         name: "Luoyang",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 121,
+          max: 125,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.KEY_QUEST, ObjectiveType.CHEST],
+        questComment: {
+          [ObjectiveType.CHEST]:
+            "The chest map actually is the whitebait Lake, but there is no direct teleport",
+        },
+        chestImage: "/chests/whitebait-lake.png",
       },
       {
         id: "flowerstreet",
         name: "Flower Street",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 121,
+          max: 125,
         },
         availableObjectiveTypes: [],
       },
@@ -749,8 +740,7 @@ export const gameData: Region[] = [
           min: 70,
           max: 73,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/orc-village.JPG",
+        availableObjectiveTypes: [],
         verified: true,
       },
     ],
@@ -948,7 +938,15 @@ export const gameData: Region[] = [
           min: 78,
           max: 91,
         },
-        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.BLUE_STAR_QUEST,
+          ObjectiveType.BLUE_STAR_CHEST_QUEST,
+        ],
       },
       {
         id: "toyfactory1f",
@@ -959,9 +957,10 @@ export const gameData: Region[] = [
         },
         availableObjectiveTypes: [
           ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
           ObjectiveType.DELIVERY_QUEST,
           ObjectiveType.SIDE_QUEST,
-          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.BLUE_STAR_QUEST,
         ],
         chestImage: "/chests/toy-factory-1f.png",
       },
@@ -972,7 +971,12 @@ export const gameData: Region[] = [
           min: 87,
           max: 91,
         },
-        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.BLUE_STAR_QUEST,
+        ],
       },
     ],
   },
@@ -991,7 +995,10 @@ export const gameData: Region[] = [
           min: 95,
           max: 99,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
         chestImage: "/chests/lighthalzen-plain.JPG",
       },
     ],
@@ -1046,7 +1053,10 @@ export const gameData: Region[] = [
           max: 95,
         },
         verified: true,
-        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
+        availableObjectiveTypes: [
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
       },
       {
         id: "glastheimhall",
@@ -1059,6 +1069,8 @@ export const gameData: Region[] = [
         availableObjectiveTypes: [
           ObjectiveType.DELIVERY_QUEST,
           ObjectiveType.DAILY_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.SPECIAL_QUEST,
         ],
       },
       {
@@ -1112,7 +1124,13 @@ export const gameData: Region[] = [
           min: 100,
           max: 100,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.BLUE_STAR_QUEST,
+          ObjectiveType.BLUE_STAR_CHEST_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
       },
       {
         id: "thanatostower",
@@ -1121,7 +1139,11 @@ export const gameData: Region[] = [
           min: 100,
           max: 100,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.SIDE_QUEST],
+        questComment: {
+          [ObjectiveType.SIDE_QUEST]:
+            "Need to finish thanatos tower first, each level gives one quest.",
+        },
       },
       {
         id: "unlimitedlibrary",
@@ -1149,7 +1171,12 @@ export const gameData: Region[] = [
           min: 98,
           max: 109,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.SPECIAL_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
       },
       {
         id: "clocktower1f",
@@ -1158,7 +1185,11 @@ export const gameData: Region[] = [
           min: 98,
           max: 105,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
         chestImage: "/chests/clock-tower-1f.JPG",
       },
       {
@@ -1169,7 +1200,7 @@ export const gameData: Region[] = [
           max: 108,
         },
         availableObjectiveTypes: [
-          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
           ObjectiveType.COLLECTION_QUEST_TYPE,
           ObjectiveType.DAILY_QUEST,
         ],
@@ -1221,7 +1252,14 @@ export const gameData: Region[] = [
           min: 101,
           max: 112,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        questComment: {
+          [ObjectiveType.PHOTO_SPOT]: "Need to finish main quest line first.",
+        },
       },
       {
         id: "homunculuslabb1f",
@@ -1230,7 +1268,18 @@ export const gameData: Region[] = [
           min: 101,
           max: 112,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        questComment: {
+          [ObjectiveType.PHOTO_SPOT]:
+            "Need to finish main quest line first. Also, there is a photo spot on the entrance map as well",
+          [ObjectiveType.DELIVERY_QUEST]:
+            "Need to finish main quest line first",
+        },
         chestImage: "/chests/homunculus-lab-b1f.JPG",
       },
       {
@@ -1240,7 +1289,15 @@ export const gameData: Region[] = [
           min: 103,
           max: 107,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.DAILY_QUEST,
+        ],
+        questComment: {
+          [ObjectiveType.PHOTO_SPOT]: "Need to finish main quest line first.",
+          [ObjectiveType.DAILY_QUEST]: "Need to finish main quest line first.",
+        },
         chestImage: "/chests/homunculus-lab-b2f-east.JPG",
       },
       {
@@ -1259,7 +1316,13 @@ export const gameData: Region[] = [
           min: 105,
           max: 110,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        questComment: {
+          [ObjectiveType.PHOTO_SPOT]: "Need to finish main quest line first.",
+        },
         chestImage: "/chests/homunculus-lab-underground-3f.JPG",
       },
     ],
@@ -1279,7 +1342,12 @@ export const gameData: Region[] = [
           min: 118,
           max: 119,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BLUE_STAR_QUEST,
+        ],
         chestImage: "/chests/border-checkpoint.JPG",
       },
     ],
@@ -1302,6 +1370,10 @@ export const gameData: Region[] = [
         availableObjectiveTypes: [
           ObjectiveType.CHEST,
           ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BLUE_STAR_QUEST,
         ],
         chestImage: "/chests/einbroch-field.png",
       },
@@ -1312,7 +1384,12 @@ export const gameData: Region[] = [
           min: 119,
           max: 124,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.SIDE_QUEST,
+        ],
         chestImage: "/chests/magma-1f.JPG",
       },
       {
@@ -1322,7 +1399,13 @@ export const gameData: Region[] = [
           min: 120,
           max: 122,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DAILY_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
         chestImage: "/chests/magma-2f.JPG",
       },
       {
@@ -1332,7 +1415,7 @@ export const gameData: Region[] = [
           min: 119,
           max: 124,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
     ],
   },
@@ -1351,7 +1434,11 @@ export const gameData: Region[] = [
           min: 121,
           max: 125,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.CHEST,
+        ],
+        chestImage: "/chests/sunset-beach.jpeg",
       },
     ],
   },
@@ -1370,7 +1457,12 @@ export const gameData: Region[] = [
           min: 125,
           max: 129,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DAILY_QUEST,
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
         chestImage: "/chests/skellington.JPG",
       },
       {
@@ -1380,7 +1472,29 @@ export const gameData: Region[] = [
           min: 127,
           max: 129,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+      },
+    ],
+  },
+  {
+    id: "niflheim",
+    name: "Niflheim",
+    levelRange: {
+      min: 124,
+      max: 130,
+    },
+    maps: [
+      {
+        id: "niflheim",
+        name: "Niflheim",
+        levelRange: {
+          min: 124,
+          max: 130,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.PHOTO_SPOT,
+        ],
       },
     ],
   },
@@ -1399,7 +1513,12 @@ export const gameData: Region[] = [
           min: 124,
           max: 130,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
         chestImage: "/chests/the-misty-forest.JPG",
       },
     ],
@@ -1419,7 +1538,7 @@ export const gameData: Region[] = [
           min: 126,
           max: 131,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
     ],
   },
@@ -1438,7 +1557,10 @@ export const gameData: Region[] = [
           min: 127,
           max: 135,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.PHOTO_SPOT,
+        ],
       },
       {
         id: "mercurypalace",
@@ -1447,7 +1569,7 @@ export const gameData: Region[] = [
           min: 127,
           max: 135,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
       {
         id: "birthplaceofgod",
@@ -1465,7 +1587,7 @@ export const gameData: Region[] = [
           min: 127,
           max: 135,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
       {
         id: "seaofazureclouds",
@@ -1474,7 +1596,7 @@ export const gameData: Region[] = [
           min: 127,
           max: 135,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
     ],
   },
@@ -1493,7 +1615,8 @@ export const gameData: Region[] = [
           min: 133,
           max: 137,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/the-plain-of-ida.png",
       },
       {
         id: "holyicecave",
@@ -1502,7 +1625,8 @@ export const gameData: Region[] = [
           min: 134,
           max: 138,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/holy-ice-cave.png",
       },
     ],
   },
@@ -1521,7 +1645,7 @@ export const gameData: Region[] = [
           min: 132,
           max: 141,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
       },
       {
         id: "holyground",
@@ -1539,7 +1663,8 @@ export const gameData: Region[] = [
           min: 132,
           max: 141,
         },
-        availableObjectiveTypes: [],
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/holy-ground-underground.png",
       },
     ],
   },

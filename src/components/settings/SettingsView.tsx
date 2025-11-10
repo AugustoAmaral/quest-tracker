@@ -354,6 +354,15 @@ export function SettingsView({
                   <ExternalLink className="h-3 w-3" />
                   Contact me on Discord
                 </a>
+                <a
+                  href="https://github.com/AugustoAmaral/quest-tracker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-3 py-1.5 text-xs border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors w-fit"
+                >
+                  <ExternalLink className="h-3 w-3" />
+                  Check this project on GitHub
+                </a>
               </div>
             </div>
 

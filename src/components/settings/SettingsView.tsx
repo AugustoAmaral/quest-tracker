@@ -189,9 +189,10 @@ export function SettingsView({
               <div className="space-y-1">
                 <p className="text-sm font-medium">Important: Data Storage</p>
                 <p className="text-xs text-muted-foreground">
-                  Your data is stored locally in your browser. If you clear browser data, 
-                  switch browsers, or use a different device, your progress may be lost. 
-                  I recommend exporting your data regularly as a backup.
+                  Your data is stored locally in your browser. If you clear
+                  browser data, switch browsers, or use a different device, your
+                  progress may be lost. I recommend exporting your data
+                  regularly as a backup.
                 </p>
               </div>
             </div>
@@ -310,9 +311,9 @@ export function SettingsView({
           <div className="flex justify-between items-center">
             <span className="text-sm font-medium">Author:</span>
             <Badge variant="outline">
-              <a 
-                href="https://github.com/AugustoAmaral" 
-                target="_blank" 
+              <a
+                href="https://github.com/AugustoAmaral"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline flex items-center gap-1"
               >
@@ -339,9 +340,10 @@ export function SettingsView({
               <div className="space-y-2">
                 <p className="text-sm font-medium">About the Data</p>
                 <p className="text-xs text-muted-foreground">
-                  All game information in this tracker is manually curated and is <strong>unofficial</strong>. 
-                  If you'd like to help improve the data, report issues, or contribute in any way, 
-                  feel free to reach out! Contributors will be credited in this section.
+                  All game information in this tracker is manually curated and
+                  is <strong>unofficial</strong>. If you'd like to help improve
+                  the data, report issues, or contribute in any way, feel free
+                  to reach out! Contributors will be credited in this section.
                 </p>
                 <a
                   href="https://discord.com/users/108515087936950272"
@@ -360,7 +362,8 @@ export function SettingsView({
             <div>
               <h4 className="font-medium mb-2">Chest Location Maps</h4>
               <p className="text-sm text-muted-foreground mb-2">
-                Special thanks to <strong>MrSho</strong> for creating and sharing the chest location maps with the community.
+                Special thanks to <strong>MrSho</strong> for creating and
+                sharing the chest location maps with the community.
               </p>
               <div className="flex flex-col gap-2">
                 <a
@@ -389,6 +392,51 @@ export function SettingsView({
                 >
                   <ExternalLink className="h-4 w-4" />
                   Additional Locations by @BlueBerries_YT
+                </a>
+                <a
+                  href="https://www.youtube.com/shorts/0XsOi5myqhU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  The plain of ida chest locations by @SaikouYomiPlays
+                </a>
+                <a
+                  href="https://www.youtube.com/shorts/WTil5kTpVVU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Sunset beach chest locations by @SaikouYomiPlays
+                </a>
+                <a
+                  href="https://www.youtube.com/shorts/ZsmMJe3Xcnk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Holy Ice Cave chest locations by @SaikouYomiPlays
+                </a>
+                <a
+                  href="https://www.youtube.com/shorts/vx0J-844X8s"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Holy Ground Underground chest locations by @SaikouYomiPlays
+                </a>
+                <a
+                  href="https://www.youtube.com/shorts/4V639uTjdgE"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 text-sm border border-input bg-background hover:bg-accent hover:text-accent-foreground rounded-md transition-colors"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Whitelake Bait chest locations by @SaikouYomiPlays
                 </a>
               </div>
             </div>

@@ -2,49 +2,6 @@ import { type Region, ObjectiveType } from "../types";
 
 export const gameData: Region[] = [
   {
-    id: "gingerbreadcity",
-    name: "Gingerbread City",
-    levelRange: {
-      min: 78,
-      max: 91,
-    },
-    maps: [
-      {
-        id: "gingerbreadcity",
-        name: "Gingerbread City",
-        levelRange: {
-          min: 78,
-          max: 91,
-        },
-        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
-      },
-      {
-        id: "toyfactory1f",
-        name: "Toy Factory 1F",
-        levelRange: {
-          min: 78,
-          max: 83,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.DELIVERY_QUEST,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.DELIVERY_QUEST,
-        ],
-        chestImage: "/chests/toy-factory-1f.png",
-      },
-      {
-        id: "toyfactory2f",
-        name: "Toy Factory 2F",
-        levelRange: {
-          min: 87,
-          max: 91,
-        },
-        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
-      },
-    ],
-  },
-  {
     id: "niflheim",
     name: "Niflheim",
     levelRange: {
@@ -83,51 +40,307 @@ export const gameData: Region[] = [
     ],
   },
   {
-    id: "skellington",
-    name: "Skellington",
+    id: "lesterlighthouse",
+    name: "Lester Lighthouse",
     levelRange: {
-      min: 125,
-      max: 129,
+      min: 0,
+      max: 0,
     },
     maps: [
       {
-        id: "skellington",
-        name: "Skellington",
+        id: "lesterlighthouse",
+        name: "Lester Lighthouse",
         levelRange: {
-          min: 125,
-          max: 129,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/skellington.JPG",
-      },
-      {
-        id: "hamelin",
-        name: "Hamelin",
-        levelRange: {
-          min: 127,
-          max: 129,
+          min: 0,
+          max: 0,
         },
         availableObjectiveTypes: [],
       },
     ],
   },
   {
-    id: "themistyforest",
-    name: "The Misty Forest",
+    id: "umbala",
+    name: "Umbala",
     levelRange: {
-      min: 124,
-      max: 130,
+      min: 0,
+      max: 0,
     },
     maps: [
       {
-        id: "themistyforest",
-        name: "The Misty Forest",
+        id: "umbala",
+        name: "Umbala",
         levelRange: {
-          min: 124,
-          max: 130,
+          min: 0,
+          max: 0,
         },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/the-misty-forest.JPG",
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "hvergelmir",
+        name: "Hvergelmir",
+        levelRange: {
+          min: 0,
+          max: 0,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "luoyang",
+    name: "Luoyang",
+    levelRange: {
+      min: 0,
+      max: 0,
+    },
+    maps: [
+      {
+        id: "luoyang",
+        name: "Luoyang",
+        levelRange: {
+          min: 0,
+          max: 0,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "flowerstreet",
+        name: "Flower Street",
+        levelRange: {
+          min: 0,
+          max: 0,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "pronterasouthgate",
+    name: "Prontera South Gate",
+    levelRange: {
+      min: 1,
+      max: 10,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "pronterasouthgate",
+        name: "Prontera South Gate",
+        levelRange: {
+          min: 1,
+          max: 10,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.KEY_QUEST,
+        ],
+        chestImage: "/chests/prontera-south-gate.JPG",
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "izludeisland",
+    name: "Izlude Island",
+    levelRange: {
+      min: 20,
+      max: 20,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "izludeisland",
+        name: "Izlude Island",
+        levelRange: {
+          min: 20,
+          max: 20,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DAILY_QUEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.BARD_QUEST_TYPE1,
+        ],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "pronterawestgate",
+    name: "Prontera West Gate",
+    levelRange: {
+      min: 13,
+      max: 21,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "pronterawestgate",
+        name: "Prontera West Gate",
+        levelRange: {
+          min: 13,
+          max: 21,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.SIDE_QUEST,
+        ],
+        chestImage: "/chests/prontera-west-gate.JPG",
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "sunkenship",
+    name: "Sunken Ship",
+    levelRange: {
+      min: 23,
+      max: 28,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "sunkenship",
+        name: "Sunken Ship",
+        levelRange: {
+          min: 23,
+          max: 28,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "prontera",
+    name: "Prontera",
+    levelRange: {
+      min: 11,
+      max: 30,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "prontera",
+        name: "Prontera",
+        levelRange: {
+          min: 11,
+          max: 30,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DAILY_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.KEY_QUEST,
+        ],
+        verified: true,
+      },
+      {
+        id: "capitalsewer1f",
+        name: "Capital Sewer 1F",
+        levelRange: {
+          min: 11,
+          max: 17,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
+      },
+      {
+        id: "capitalsewer2f",
+        name: "Capital Sewer 2F",
+        levelRange: {
+          min: 20,
+          max: 30,
+        },
+        availableObjectiveTypes: [],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "labyrinthforest",
+    name: "Labyrinth Forest",
+    levelRange: {
+      min: 13,
+      max: 35,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "labyrinthforest",
+        name: "Labyrinth Forest",
+        levelRange: {
+          min: 13,
+          max: 35,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "goblinforest",
+    name: "Goblin Forest",
+    levelRange: {
+      min: 35,
+      max: 39,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "goblinforest",
+        name: "Goblin Forest",
+        levelRange: {
+          min: 35,
+          max: 39,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+        ],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "ghostship",
+    name: "Ghost Ship",
+    levelRange: {
+      min: 26,
+      max: 40,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "ghostship",
+        name: "Ghost Ship",
+        levelRange: {
+          min: 26,
+          max: 40,
+        },
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+        verified: true,
       },
     ],
   },
@@ -192,10 +405,160 @@ export const gameData: Region[] = [
           ObjectiveType.BATTLE_QUEST,
         ],
         questComment: {
-          [ObjectiveType.SIDE_QUEST]:
-            "Need to finish Izlude side quest first",
+          [ObjectiveType.SIDE_QUEST]: "Need to finish Izlude side quest first",
         },
         chestImage: "/chests/underwater-temple.JPG",
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "mjolnirmountains",
+    name: "Mjolnir Mountains",
+    levelRange: {
+      min: 20,
+      max: 45,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "mjolnirmountains",
+        name: "Mjolnir Mountains",
+        levelRange: {
+          min: 20,
+          max: 45,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        chestImage: "/chests/mt-mjolnir.JPG",
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "sogratdesert",
+    name: "Sograt Desert",
+    levelRange: {
+      min: 40,
+      max: 51,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "sogratdesert",
+        name: "Sograt Desert",
+        levelRange: {
+          min: 40,
+          max: 51,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+        ],
+        chestImage: "/chests/sograt-desert.JPG",
+        verified: true,
+      },
+      {
+        id: "anthell1f",
+        name: "Ant Hell 1F",
+        levelRange: {
+          min: 40,
+          max: 48,
+        },
+        availableObjectiveTypes: [],
+        verified: true,
+      },
+      {
+        id: "anthell2f",
+        name: "Ant Hell 2F",
+        levelRange: {
+          min: 40,
+          max: 48,
+        },
+        availableObjectiveTypes: [],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "morrroc",
+    name: "Morrroc",
+    levelRange: {
+      min: 49,
+      max: 55,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "morrroc",
+        name: "Morrroc",
+        levelRange: {
+          min: 49,
+          max: 55,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.BATTLE_QUEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.HAT_QUEST,
+          ObjectiveType.BARD_QUEST_TYPE1,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        chestImage: "/chests/morroc.JPG",
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "payonsouth",
+    name: "Payon South",
+    levelRange: {
+      min: 56,
+      max: 60,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "payonsouth",
+        name: "Payon South",
+        levelRange: {
+          min: 56,
+          max: 60,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        verified: true,
+        chestImage: "/chests/payon-south.JPG",
+      },
+    ],
+  },
+  {
+    id: "payonforestsouth",
+    name: "Payon Forest South",
+    levelRange: {
+      min: 56,
+      max: 60,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "payonforestsouth",
+        name: "Payon Forest South",
+        levelRange: {
+          min: 56,
+          max: 60,
+        },
+        availableObjectiveTypes: [],
         verified: true,
       },
     ],
@@ -227,41 +590,74 @@ export const gameData: Region[] = [
     ],
   },
   {
-    id: "abyssallake",
-    name: "Abyssal Lake",
+    id: "pronteranorth",
+    name: "Prontera North",
     levelRange: {
-      min: 110,
-      max: 110,
-    },
-    maps: [
-      {
-        id: "abyssallake",
-        name: "Abyssal Lake",
-        levelRange: {
-          min: 110,
-          max: 110,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "ghostship",
-    name: "Ghost Ship",
-    levelRange: {
-      min: 26,
-      max: 40,
+      min: 55,
+      max: 65,
     },
     verified: true,
     maps: [
       {
-        id: "ghostship",
-        name: "Ghost Ship",
+        id: "pronteranorth",
+        name: "Prontera North",
         levelRange: {
-          min: 26,
-          max: 40,
+          min: 55,
+          max: 65,
         },
-        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+        availableObjectiveTypes: [
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+        ],
+        verified: true,
+      },
+    ],
+  },
+  {
+    id: "pyramid1f",
+    name: "Pyramid 1F",
+    levelRange: {
+      min: 52,
+      max: 68,
+    },
+    verified: true,
+    maps: [
+      {
+        id: "pyramid1f",
+        name: "Pyramid 1F",
+        levelRange: {
+          min: 52,
+          max: 57,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.PHOTO_SPOT_QUEST,
+          ObjectiveType.PHOTO_SPOT,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+        ],
+        chestImage: "/chests/pyramid-1f.JPG",
+        verified: true,
+      },
+      {
+        id: "pyramid2f",
+        name: "Pyramid 2F",
+        levelRange: {
+          min: 64,
+          max: 68,
+        },
+        availableObjectiveTypes: [ObjectiveType.COLLECTION_QUEST_TYPE],
+        verified: true,
+      },
+      {
+        id: "pyramid3f",
+        name: "Pyramid 3F",
+        levelRange: {
+          min: 64,
+          max: 68,
+        },
+        availableObjectiveTypes: [],
         verified: true,
       },
     ],
@@ -338,516 +734,24 @@ export const gameData: Region[] = [
     ],
   },
   {
-    id: "payonsouth",
-    name: "Payon South",
+    id: "orcvilagesouth",
+    name: "Orc Vilage South",
     levelRange: {
-      min: 56,
-      max: 60,
+      min: 70,
+      max: 73,
     },
     verified: true,
     maps: [
       {
-        id: "payonsouth",
-        name: "Payon South",
+        id: "orcvilagesouth",
+        name: "Orc Vilage South",
         levelRange: {
-          min: 56,
-          max: 60,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-        ],
-        verified: true,
-        chestImage: "/chests/payon-south.JPG",
-      },
-    ],
-  },
-  {
-    id: "payonforestsouth",
-    name: "Payon Forest South",
-    levelRange: {
-      min: 56,
-      max: 60,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "payonforestsouth",
-        name: "Payon Forest South",
-        levelRange: {
-          min: 56,
-          max: 60,
-        },
-        availableObjectiveTypes: [],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "sunkenship",
-    name: "Sunken Ship",
-    levelRange: {
-      min: 23,
-      max: 28,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "sunkenship",
-        name: "Sunken Ship",
-        levelRange: {
-          min: 23,
-          max: 28,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-        ],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "izludeisland",
-    name: "Izlude Island",
-    levelRange: {
-      min: 20,
-      max: 20,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "izludeisland",
-        name: "Izlude Island",
-        levelRange: {
-          min: 20,
-          max: 20,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.DAILY_QUEST,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.BARD_QUEST_TYPE1,
-        ],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "yuno",
-    name: "Yuno",
-    levelRange: {
-      min: 100,
-      max: 100,
-    },
-    maps: [
-      {
-        id: "yuno",
-        name: "Yuno",
-        levelRange: {
-          min: 100,
-          max: 100,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "thanatostower",
-        name: "Thanatos Tower",
-        levelRange: {
-          min: 100,
-          max: 100,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "unlimitedlibrary",
-        name: "Unlimited Library",
-        levelRange: {
-          min: 100,
-          max: 100,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "einbrochfield",
-    name: "Einbroch Field",
-    levelRange: {
-      min: 116,
-      max: 124,
-    },
-    maps: [
-      {
-        id: "einbrochfield",
-        name: "Einbroch Field",
-        levelRange: {
-          min: 116,
-          max: 119,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.DELIVERY_QUEST,
-        ],
-        chestImage: "/chests/einbroch-field.png",
-      },
-      {
-        id: "magmadungeon1f",
-        name: "Magma Dungeon 1F",
-        levelRange: {
-          min: 119,
-          max: 124,
+          min: 70,
+          max: 73,
         },
         availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/magma-1f.JPG",
-      },
-      {
-        id: "magmadungeon2f",
-        name: "Magma Dungeon 2F",
-        levelRange: {
-          min: 120,
-          max: 122,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/magma-2f.JPG",
-      },
-      {
-        id: "magmadungeon3f",
-        name: "Magma Dungeon 3F",
-        levelRange: {
-          min: 119,
-          max: 124,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "bordercheckpooint",
-    name: "Border Checkpooint",
-    levelRange: {
-      min: 118,
-      max: 119,
-    },
-    maps: [
-      {
-        id: "bordercheckpooint",
-        name: "Border Checkpooint",
-        levelRange: {
-          min: 118,
-          max: 119,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/border-checkpoint.JPG",
-      },
-    ],
-  },
-  {
-    id: "aldebaran",
-    name: "Al De Baran",
-    levelRange: {
-      min: 98,
-      max: 109,
-    },
-    maps: [
-      {
-        id: "aldebaran",
-        name: "Al De Baran",
-        levelRange: {
-          min: 98,
-          max: 109,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "clocktower1f",
-        name: "Clock Tower 1F",
-        levelRange: {
-          min: 98,
-          max: 105,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/clock-tower-1f.JPG",
-      },
-      {
-        id: "clocktower2f",
-        name: "Clock Tower 2F",
-        levelRange: {
-          min: 101,
-          max: 108,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-          ObjectiveType.DAILY_QUEST,
-        ],
-        chestImage: "/chests/clock-tower-2f.png",
-      },
-      {
-        id: "clocktowerb1",
-        name: "Clock Tower B1",
-        levelRange: {
-          min: 105,
-          max: 109,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/clock-tower-b1.png",
-      },
-    ],
-  },
-  {
-    id: "pronteranorth",
-    name: "Prontera North",
-    levelRange: {
-      min: 55,
-      max: 65,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "pronteranorth",
-        name: "Prontera North",
-        levelRange: {
-          min: 55,
-          max: 65,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.SIDE_QUEST,
-        ],
+        chestImage: "/chests/orc-village.JPG",
         verified: true,
-      },
-    ],
-  },
-  {
-    id: "prontera",
-    name: "Prontera",
-    levelRange: {
-      min: 11,
-      max: 30,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "prontera",
-        name: "Prontera",
-        levelRange: {
-          min: 11,
-          max: 30,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.DAILY_QUEST,
-          ObjectiveType.HAT_QUEST,
-          ObjectiveType.BARD_QUEST_TYPE1,
-          ObjectiveType.KEY_QUEST,
-        ],
-        verified: true,
-      },
-      {
-        id: "capitalsewer1f",
-        name: "Capital Sewer 1F",
-        levelRange: {
-          min: 11,
-          max: 17,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-        ],
-        verified: true,
-      },
-      {
-        id: "capitalsewer2f",
-        name: "Capital Sewer 2F",
-        levelRange: {
-          min: 20,
-          max: 30,
-        },
-        availableObjectiveTypes: [],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "pronterasouthgate",
-    name: "Prontera South Gate",
-    levelRange: {
-      min: 1,
-      max: 10,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "pronterasouthgate",
-        name: "Prontera South Gate",
-        levelRange: {
-          min: 1,
-          max: 10,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.KEY_QUEST,
-        ],
-        chestImage: "/chests/prontera-south-gate.JPG",
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "sogratdesert",
-    name: "Sograt Desert",
-    levelRange: {
-      min: 40,
-      max: 51,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "sogratdesert",
-        name: "Sograt Desert",
-        levelRange: {
-          min: 40,
-          max: 51,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.BATTLE_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-        ],
-        chestImage: "/chests/sograt-desert.JPG",
-        verified: true,
-      },
-      {
-        id: "anthell1f",
-        name: "Ant Hell 1F",
-        levelRange: {
-          min: 40,
-          max: 48,
-        },
-        availableObjectiveTypes: [],
-        verified: true,
-      },
-      {
-        id: "anthell2f",
-        name: "Ant Hell 2F",
-        levelRange: {
-          min: 40,
-          max: 48,
-        },
-        availableObjectiveTypes: [],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "labyrinthforest",
-    name: "Labyrinth Forest",
-    levelRange: {
-      min: 13,
-      max: 35,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "labyrinthforest",
-        name: "Labyrinth Forest",
-        levelRange: {
-          min: 13,
-          max: 35,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-        ],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "pronterawestgate",
-    name: "Prontera West Gate",
-    levelRange: {
-      min: 13,
-      max: 21,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "pronterawestgate",
-        name: "Prontera West Gate",
-        levelRange: {
-          min: 13,
-          max: 21,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-          ObjectiveType.BATTLE_QUEST,
-          ObjectiveType.SIDE_QUEST,
-        ],
-        chestImage: "/chests/prontera-west-gate.JPG",
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "morrroc",
-    name: "Morrroc",
-    levelRange: {
-      min: 49,
-      max: 55,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "morrroc",
-        name: "Morrroc",
-        levelRange: {
-          min: 49,
-          max: 55,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.BATTLE_QUEST,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.HAT_QUEST,
-          ObjectiveType.BARD_QUEST_TYPE1,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-        ],
-        chestImage: "/chests/morroc.JPG",
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "lesterlighthouse",
-    name: "Lester Lighthouse",
-    levelRange: {
-      min: 0,
-      max: 0,
-    },
-    maps: [
-      {
-        id: "lesterlighthouse",
-        name: "Lester Lighthouse",
-        levelRange: {
-          min: 0,
-          max: 0,
-        },
-        availableObjectiveTypes: [],
       },
     ],
   },
@@ -943,106 +847,6 @@ export const gameData: Region[] = [
     ],
   },
   {
-    id: "pyramid1f",
-    name: "Pyramid 1F",
-    levelRange: {
-      min: 52,
-      max: 68,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "pyramid1f",
-        name: "Pyramid 1F",
-        levelRange: {
-          min: 52,
-          max: 57,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.SIDE_QUEST,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-        ],
-        chestImage: "/chests/pyramid-1f.JPG",
-        verified: true,
-      },
-      {
-        id: "pyramid2f",
-        name: "Pyramid 2F",
-        levelRange: {
-          min: 64,
-          max: 68,
-        },
-        availableObjectiveTypes: [ObjectiveType.COLLECTION_QUEST_TYPE],
-        verified: true,
-      },
-      {
-        id: "pyramid3f",
-        name: "Pyramid 3F",
-        levelRange: {
-          min: 64,
-          max: 68,
-        },
-        availableObjectiveTypes: [],
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "mjolnirmountains",
-    name: "Mjolnir Mountains",
-    levelRange: {
-      min: 20,
-      max: 45,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "mjolnirmountains",
-        name: "Mjolnir Mountains",
-        levelRange: {
-          min: 20,
-          max: 45,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.CHEST,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-        ],
-        chestImage: "/chests/mt-mjolnir.JPG",
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "goblinforest",
-    name: "Goblin Forest",
-    levelRange: {
-      min: 35,
-      max: 39,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "goblinforest",
-        name: "Goblin Forest",
-        levelRange: {
-          min: 35,
-          max: 39,
-        },
-        availableObjectiveTypes: [
-          ObjectiveType.COLLECTION_QUEST_TYPE,
-          ObjectiveType.PHOTO_SPOT,
-          ObjectiveType.PHOTO_SPOT_QUEST,
-        ],
-        verified: true,
-      },
-    ],
-  },
-  {
     id: "orcvilage",
     name: "Orc Vilage",
     levelRange: {
@@ -1077,106 +881,6 @@ export const gameData: Region[] = [
         },
         verified: true,
         availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "orcvilagesouth",
-    name: "Orc Vilage South",
-    levelRange: {
-      min: 70,
-      max: 73,
-    },
-    verified: true,
-    maps: [
-      {
-        id: "orcvilagesouth",
-        name: "Orc Vilage South",
-        levelRange: {
-          min: 70,
-          max: 73,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/orc-village.JPG",
-        verified: true,
-      },
-    ],
-  },
-  {
-    id: "lighthalzenplain",
-    name: "Lighthalzen Plain",
-    levelRange: {
-      min: 95,
-      max: 99,
-    },
-    maps: [
-      {
-        id: "lighthalzenplain",
-        name: "Lighthalzen Plain",
-        levelRange: {
-          min: 95,
-          max: 99,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/lighthalzen-plain.JPG",
-      },
-    ],
-  },
-  {
-    id: "lighthalzen",
-    name: "Lighthalzen",
-    levelRange: {
-      min: 101,
-      max: 112,
-    },
-    maps: [
-      {
-        id: "lighthalzen",
-        name: "Lighthalzen",
-        levelRange: {
-          min: 101,
-          max: 112,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "homunculuslabb1f",
-        name: "Homunculus Lab B1F",
-        levelRange: {
-          min: 101,
-          max: 112,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/homunculus-lab-b1f.JPG",
-      },
-      {
-        id: "homunculuslabb2feast",
-        name: "Homunculus Lab B2F East",
-        levelRange: {
-          min: 103,
-          max: 107,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/homunculus-lab-b2f-east.JPG",
-      },
-      {
-        id: "homunculuslabb2fwest",
-        name: "Homunculus Lab B2F West",
-        levelRange: {
-          min: 103,
-          max: 110,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "homunculuslaboratoryunderground3f",
-        name: "Homunculus Laboratory Underground 3F",
-        levelRange: {
-          min: 105,
-          max: 110,
-        },
-        availableObjectiveTypes: [ObjectiveType.CHEST],
-        chestImage: "/chests/homunculus-lab-underground-3f.JPG",
       },
     ],
   },
@@ -1226,6 +930,69 @@ export const gameData: Region[] = [
         ],
         verified: true,
         chestImage: "/chests/glast-heim-outskirt.JPG",
+      },
+    ],
+  },
+  {
+    id: "gingerbreadcity",
+    name: "Gingerbread City",
+    levelRange: {
+      min: 78,
+      max: 91,
+    },
+    maps: [
+      {
+        id: "gingerbreadcity",
+        name: "Gingerbread City",
+        levelRange: {
+          min: 78,
+          max: 91,
+        },
+        availableObjectiveTypes: [ObjectiveType.PHOTO_SPOT],
+      },
+      {
+        id: "toyfactory1f",
+        name: "Toy Factory 1F",
+        levelRange: {
+          min: 78,
+          max: 83,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+          ObjectiveType.SIDE_QUEST,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
+        chestImage: "/chests/toy-factory-1f.png",
+      },
+      {
+        id: "toyfactory2f",
+        name: "Toy Factory 2F",
+        levelRange: {
+          min: 87,
+          max: 91,
+        },
+        availableObjectiveTypes: [ObjectiveType.DELIVERY_QUEST],
+      },
+    ],
+  },
+  {
+    id: "lighthalzenplain",
+    name: "Lighthalzen Plain",
+    levelRange: {
+      min: 95,
+      max: 99,
+    },
+    maps: [
+      {
+        id: "lighthalzenplain",
+        name: "Lighthalzen Plain",
+        levelRange: {
+          min: 95,
+          max: 99,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/lighthalzen-plain.JPG",
       },
     ],
   },
@@ -1331,28 +1098,381 @@ export const gameData: Region[] = [
     ],
   },
   {
-    id: "umbala",
-    name: "Umbala",
+    id: "yuno",
+    name: "Yuno",
     levelRange: {
-      min: 0,
-      max: 0,
+      min: 100,
+      max: 100,
     },
     maps: [
       {
-        id: "umbala",
-        name: "Umbala",
+        id: "yuno",
+        name: "Yuno",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 100,
+          max: 100,
         },
         availableObjectiveTypes: [],
       },
       {
-        id: "hvergelmir",
-        name: "Hvergelmir",
+        id: "thanatostower",
+        name: "Thanatos Tower",
         levelRange: {
-          min: 0,
-          max: 0,
+          min: 100,
+          max: 100,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "unlimitedlibrary",
+        name: "Unlimited Library",
+        levelRange: {
+          min: 100,
+          max: 100,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "aldebaran",
+    name: "Al De Baran",
+    levelRange: {
+      min: 98,
+      max: 109,
+    },
+    maps: [
+      {
+        id: "aldebaran",
+        name: "Al De Baran",
+        levelRange: {
+          min: 98,
+          max: 109,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "clocktower1f",
+        name: "Clock Tower 1F",
+        levelRange: {
+          min: 98,
+          max: 105,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/clock-tower-1f.JPG",
+      },
+      {
+        id: "clocktower2f",
+        name: "Clock Tower 2F",
+        levelRange: {
+          min: 101,
+          max: 108,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.COLLECTION_QUEST_TYPE,
+          ObjectiveType.DAILY_QUEST,
+        ],
+        chestImage: "/chests/clock-tower-2f.png",
+      },
+      {
+        id: "clocktowerb1",
+        name: "Clock Tower B1",
+        levelRange: {
+          min: 105,
+          max: 109,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/clock-tower-b1.png",
+      },
+    ],
+  },
+  {
+    id: "abyssallake",
+    name: "Abyssal Lake",
+    levelRange: {
+      min: 110,
+      max: 110,
+    },
+    maps: [
+      {
+        id: "abyssallake",
+        name: "Abyssal Lake",
+        levelRange: {
+          min: 110,
+          max: 110,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "lighthalzen",
+    name: "Lighthalzen",
+    levelRange: {
+      min: 101,
+      max: 112,
+    },
+    maps: [
+      {
+        id: "lighthalzen",
+        name: "Lighthalzen",
+        levelRange: {
+          min: 101,
+          max: 112,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "homunculuslabb1f",
+        name: "Homunculus Lab B1F",
+        levelRange: {
+          min: 101,
+          max: 112,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/homunculus-lab-b1f.JPG",
+      },
+      {
+        id: "homunculuslabb2feast",
+        name: "Homunculus Lab B2F East",
+        levelRange: {
+          min: 103,
+          max: 107,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/homunculus-lab-b2f-east.JPG",
+      },
+      {
+        id: "homunculuslabb2fwest",
+        name: "Homunculus Lab B2F West",
+        levelRange: {
+          min: 103,
+          max: 110,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "homunculuslaboratoryunderground3f",
+        name: "Homunculus Laboratory Underground 3F",
+        levelRange: {
+          min: 105,
+          max: 110,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/homunculus-lab-underground-3f.JPG",
+      },
+    ],
+  },
+  {
+    id: "bordercheckpooint",
+    name: "Border Checkpooint",
+    levelRange: {
+      min: 118,
+      max: 119,
+    },
+    maps: [
+      {
+        id: "bordercheckpooint",
+        name: "Border Checkpooint",
+        levelRange: {
+          min: 118,
+          max: 119,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/border-checkpoint.JPG",
+      },
+    ],
+  },
+  {
+    id: "einbrochfield",
+    name: "Einbroch Field",
+    levelRange: {
+      min: 116,
+      max: 124,
+    },
+    maps: [
+      {
+        id: "einbrochfield",
+        name: "Einbroch Field",
+        levelRange: {
+          min: 116,
+          max: 119,
+        },
+        availableObjectiveTypes: [
+          ObjectiveType.CHEST,
+          ObjectiveType.DELIVERY_QUEST,
+        ],
+        chestImage: "/chests/einbroch-field.png",
+      },
+      {
+        id: "magmadungeon1f",
+        name: "Magma Dungeon 1F",
+        levelRange: {
+          min: 119,
+          max: 124,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/magma-1f.JPG",
+      },
+      {
+        id: "magmadungeon2f",
+        name: "Magma Dungeon 2F",
+        levelRange: {
+          min: 120,
+          max: 122,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/magma-2f.JPG",
+      },
+      {
+        id: "magmadungeon3f",
+        name: "Magma Dungeon 3F",
+        levelRange: {
+          min: 119,
+          max: 124,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "sunsetbeach",
+    name: "Sunset Beach",
+    levelRange: {
+      min: 121,
+      max: 125,
+    },
+    maps: [
+      {
+        id: "sunsetbeach",
+        name: "Sunset Beach",
+        levelRange: {
+          min: 121,
+          max: 125,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "skellington",
+    name: "Skellington",
+    levelRange: {
+      min: 125,
+      max: 129,
+    },
+    maps: [
+      {
+        id: "skellington",
+        name: "Skellington",
+        levelRange: {
+          min: 125,
+          max: 129,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/skellington.JPG",
+      },
+      {
+        id: "hamelin",
+        name: "Hamelin",
+        levelRange: {
+          min: 127,
+          max: 129,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "themistyforest",
+    name: "The Misty Forest",
+    levelRange: {
+      min: 124,
+      max: 130,
+    },
+    maps: [
+      {
+        id: "themistyforest",
+        name: "The Misty Forest",
+        levelRange: {
+          min: 124,
+          max: 130,
+        },
+        availableObjectiveTypes: [ObjectiveType.CHEST],
+        chestImage: "/chests/the-misty-forest.JPG",
+      },
+    ],
+  },
+  {
+    id: "timegarden",
+    name: "Time Garden",
+    levelRange: {
+      min: 126,
+      max: 131,
+    },
+    maps: [
+      {
+        id: "timegarden",
+        name: "Time Garden",
+        levelRange: {
+          min: 126,
+          max: 131,
+        },
+        availableObjectiveTypes: [],
+      },
+    ],
+  },
+  {
+    id: "eclage",
+    name: "Eclage",
+    levelRange: {
+      min: 127,
+      max: 135,
+    },
+    maps: [
+      {
+        id: "eclage",
+        name: "Eclage",
+        levelRange: {
+          min: 127,
+          max: 135,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "mercurypalace",
+        name: "Mercury Palace",
+        levelRange: {
+          min: 127,
+          max: 135,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "birthplaceofgod",
+        name: "Birthplace of God",
+        levelRange: {
+          min: 127,
+          max: 135,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "floatingstarrock",
+        name: "Floating Star Rock",
+        levelRange: {
+          min: 127,
+          max: 135,
+        },
+        availableObjectiveTypes: [],
+      },
+      {
+        id: "seaofazureclouds",
+        name: "Sea of Azure Clouds",
+        levelRange: {
+          min: 127,
+          max: 135,
         },
         availableObjectiveTypes: [],
       },
@@ -1418,127 +1538,6 @@ export const gameData: Region[] = [
         levelRange: {
           min: 132,
           max: 141,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "luoyang",
-    name: "Luoyang",
-    levelRange: {
-      min: 0,
-      max: 0,
-    },
-    maps: [
-      {
-        id: "luoyang",
-        name: "Luoyang",
-        levelRange: {
-          min: 0,
-          max: 0,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "flowerstreet",
-        name: "Flower Street",
-        levelRange: {
-          min: 0,
-          max: 0,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "sunsetbeach",
-    name: "Sunset Beach",
-    levelRange: {
-      min: 121,
-      max: 125,
-    },
-    maps: [
-      {
-        id: "sunsetbeach",
-        name: "Sunset Beach",
-        levelRange: {
-          min: 121,
-          max: 125,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "eclage",
-    name: "Eclage",
-    levelRange: {
-      min: 127,
-      max: 135,
-    },
-    maps: [
-      {
-        id: "eclage",
-        name: "Eclage",
-        levelRange: {
-          min: 127,
-          max: 135,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "mercurypalace",
-        name: "Mercury Palace",
-        levelRange: {
-          min: 127,
-          max: 135,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "birthplaceofgod",
-        name: "Birthplace of God",
-        levelRange: {
-          min: 127,
-          max: 135,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "floatingstarrock",
-        name: "Floating Star Rock",
-        levelRange: {
-          min: 127,
-          max: 135,
-        },
-        availableObjectiveTypes: [],
-      },
-      {
-        id: "seaofazureclouds",
-        name: "Sea of Azure Clouds",
-        levelRange: {
-          min: 127,
-          max: 135,
-        },
-        availableObjectiveTypes: [],
-      },
-    ],
-  },
-  {
-    id: "timegarden",
-    name: "Time Garden",
-    levelRange: {
-      min: 126,
-      max: 131,
-    },
-    maps: [
-      {
-        id: "timegarden",
-        name: "Time Garden",
-        levelRange: {
-          min: 126,
-          max: 131,
         },
         availableObjectiveTypes: [],
       },

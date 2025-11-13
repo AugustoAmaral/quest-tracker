@@ -467,6 +467,24 @@ export function SettingsView({
                 Visit shadcn/ui
               </a>
             </div>
+
+            <Separator />
+
+            <div>
+              <h4 className="font-medium mb-2">Special Thanks</h4>
+              <p className="text-sm text-muted-foreground mb-2">
+                Thank you to everyone who has provided suggestions and feedback
+                to improve this tracker:
+              </p>
+              <div className="bg-muted/50 border border-border rounded-lg p-3">
+                <ul className="text-sm space-y-1">
+                  <li className="flex items-center gap-2">
+                    <span className="text-primary">•</span>
+                    <strong>Karlito</strong> - for dark mode suggestions on discord
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </CardContent>
       </Card>

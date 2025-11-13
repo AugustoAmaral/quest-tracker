@@ -8,6 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 import type { Profile } from "../../types";
+import { ThemeToggle } from "./ThemeToggle";
 
 interface HeaderProps {
   activeProfile: Profile | null;
@@ -32,21 +33,23 @@ export function Header({
         <h1 className="font-semibold text-sm truncate flex-1 min-w-0">
           Ragnarok M: Classic Quest Tracker
         </h1>
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Button
-              variant="outline"
-              className="justify-between min-w-[140px] shrink-0"
-            >
-              <div className="flex items-center gap-2">
-                <User className="h-4 w-4" />
-                <span className="truncate">
-                  {activeProfile?.name || "No Profile"}
-                </span>
-              </div>
-              <ChevronDown className="h-4 w-4" />
-            </Button>
-          </DropdownMenuTrigger>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button
+                variant="outline"
+                className="justify-between min-w-[140px] shrink-0"
+              >
+                <div className="flex items-center gap-2">
+                  <User className="h-4 w-4" />
+                  <span className="truncate">
+                    {activeProfile?.name || "No Profile"}
+                  </span>
+                </div>
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
             <div className="px-2 py-1.5">
               <p className="text-sm font-medium">Switch Profile</p>
@@ -95,6 +98,7 @@ export function Header({
             )}
           </DropdownMenuContent>
         </DropdownMenu>
+        </div>
       </div>
     </header>
   );

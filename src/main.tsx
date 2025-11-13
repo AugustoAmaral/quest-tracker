@@ -4,6 +4,7 @@ import "./index.css";
 
 import { routeTree } from "./routeTree.gen";
 import { StrictMode } from "react";
+import { ThemeProvider } from "next-themes";
 
 declare module "@tanstack/react-router" {
   interface Register {
@@ -18,7 +19,9 @@ if (!rootElement.innerHTML) {
   const root = createRoot(rootElement);
   root.render(
     <StrictMode>
-      <RouterProvider router={router} />
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </StrictMode>,
   );
 }
